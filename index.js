@@ -21,71 +21,21 @@ const gravity = 0.7; // downward acceleration to objects
 
 const resultTextElement = document.querySelector('#displayResult');
 
-class Sprite {
-  constructor({ position, velocity, color = "blue", offset }) {
-    /*position independent of one another. wrapping in an object makes u pass through one argument instead of two cat pass through velocity first*/
-    //define the properties associated with the sprite
-    this.position = position;
-    this.velocity = velocity;
-    this.height = 150;
-    this.width = 50;
-    this.lastKey;
-    this.attackBox = {
-      position: {
-        x: this.position.x,
-        y: this.position.y,
-      },
-      offset,
-      width: 100,
-      height: 50,
-    };
-    this.color = color;
-    this.isAttacking;
-    this.health = 100;
-  }
-  drawSprite() {
-    ctx.fillStyle = this.color;
-    ctx.fillRect(this.position.x, this.position.y, this.width, this.height); //were drawing on the canvas so we fill in spaces(referencing x)
+/////////////
+//BackGround
+////////////
+const background = new Sprite({
+  position: {
+    x: 0,
+    y: 0
+  },
+  imageSrc: './img/fighting-background-1.gif'
+});
 
-    //attack box
-    if (this.isAttacking) {
-      ctx.fillStyle = "green";
-      ctx.fillRect(
-        this.attackBox.position.x,
-        this.attackBox.position.y,
-        this.attackBox.width,
-        this.attackBox.height
-      );
-    }
-  }
-
-  moveSprite() {
-    this.drawSprite();
-    this.attackBox.position.x = this.position.x - this.attackBox.offset.x;
-    this.attackBox.position.y = this.position.y;
-    //this.velocity.y += gravity
-    this.position.x += this.velocity.x; //
-    this.position.y += this.velocity.y; //over time our position has velocity is added to it but dont forget to call this function in the animation function
-    if (
-      this.position.y + this.height + this.velocity.y >=
-      canvasElement.height
-    ) {
-      this.velocity.y = 0;
-      //this.height === to the bottom of the rec if the stops from dropping off pagee
-    } else this.velocity.y += gravity;
-  }
-
-  attack() {
-    this.isAttacking = true;
-    setTimeout(() => {
-      this.isAttacking = false;
-    }, 100);
-  }
-}
 /////////////
 //Player
 ////////////
-const player = new Sprite({
+const player = new Fighter({
   position: {
     x: canvasElement.width * 0.4,
     y: 15,
@@ -102,7 +52,7 @@ const player = new Sprite({
 /////////////
 //Enemy
 ////////////
-const enemy = new Sprite({
+const enemy = new Fighter({
   position: {
     x: canvasElement.width * 0.8,
     y: 15,
@@ -176,14 +126,14 @@ function decrementTimer(){
     determineWinner({ player, enemy, timerId });
   }
 }
-decrementTimer()
-//<div style = "position: absolute; color: white; align-items: center; justify-content: center; top: 0; right: 0;  left: 0; bottom: 0; display: none;">TIE GAME</div> add this part after
+decrementTimer();
 
 //moving objects velocity determines direction inside an animation loopand gravity
 function animatieSprites() {
   window.requestAnimationFrame(animatieSprites); //creating an infinite loop
   ctx.fillStyle = "black"; // black canvas
   ctx.fillRect(0, 0, 1024, 576); //not drawing anything
+  background.update();
   player.moveSprite();
   enemy.moveSprite();
 
