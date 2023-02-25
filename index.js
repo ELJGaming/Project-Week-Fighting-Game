@@ -24,31 +24,31 @@ const resultTextElement = document.querySelector('#displayResult');
 /////////////
 //BackGround
 ////////////
-const background = new Sprite({
-  position: {
-    x: 0,
-    y: 0
-  },
-  imageSrc: './img/backgrounds/background-default.png'
-});
-
-const shop = new Sprite({
-  position: {
-    x: 625,
-    y: 128
-  },
-  imageSrc: './img/backgrounds/shop.png',
-  scale: 2.75,
-  framesMax: 6
-});
-
 // const background = new Sprite({
 //   position: {
 //     x: 0,
 //     y: 0
 //   },
-//   imageSrc: './img/backgrounds/fighting-background-1.gif'
+//   imageSrc: './img/backgrounds/background-default.png'
 // });
+
+// const shop = new Sprite({
+//   position: {
+//     x: 625,
+//     y: 128
+//   },
+//   imageSrc: './img/backgrounds/shop.png',
+//   scale: 2.75,
+//   framesMax: 6
+// });
+
+const background = new Sprite({
+  position: {
+    x: 0,
+    y: 0
+  },
+  imageSrc: './img/backgrounds/fighting-background-1.gif'
+});
 
 /////////////
 //Player
@@ -233,7 +233,7 @@ function animatieSprites() {
   ctx.fillStyle = "black"; // black canvas
   ctx.fillRect(0, 0, 1024, 576); //not drawing anything
   background.update();
-  shop.update();
+  // shop.update();
   // contrast background
   ctx.fillStyle = 'rgba(255, 255, 255, 0.15)';
   ctx.fillRect(0, 0, canvasElement.width, canvasElement.height);
