@@ -138,6 +138,9 @@ const keys = {
 
 let lastKey; //show last key that was pressed
 
+/////////////////// 
+////HitBox
+/////////////////// 
 function rectanglarCollision({ rectangle1, rectangle2 }) {
   return (
     rectangle1.attackBox.position.x + rectangle1.attackBox.width >=
