@@ -94,6 +94,10 @@ const player = new Fighter({
       imageSrc: './img/samauriMack/Take Hit - white silhouette.png',
       framesMax: 4
     },
+    death: {
+      imageSrc: './img/samauriMack/Death.png',
+      framesMax: 6
+    }
   },
   attackBox: {
     offset: {
@@ -148,6 +152,10 @@ const enemy = new Fighter({
       imageSrc: './img/kenji/Take hit.png',
       framesMax: 3
     },
+    death: {
+      imageSrc: './img/kenji/Death.png',
+      framesMax: 7
+    }
   },
   attackBox: {
     offset: {
@@ -303,37 +311,43 @@ animatieSprites();
 /////////////////
 
 window.addEventListener("keydown", (event) => {
-  switch (event.key) {
-    ////player
-    case "d":
-      keys.d.pressed = true;
-      player.lastKey = "d";
-      break; // if key is equal to d player moves 1 to right
-    case "a":
-      keys.a.pressed = true;
-      player.lastKey = "a";
-      break; // if key is equal to a player moves 1 to left
-    case "w":
-      player.velocity.y = -15;
-      break; // if key is equal to a player moves 1 to up
-    case " ":
-      player.attack();
-      break; // if space is equal to a player attack
-    ////enemy
-    case "ArrowRight":
-      keys.ArrowRight.pressed = true;
-      enemy.lastKey = "ArrowRight";
-      break; // if key is equal to d player moves 1 to right
-    case "ArrowLeft":
-      keys.ArrowLeft.pressed = true;
-      enemy.lastKey = "ArrowLeft";
-      break; // if key is equal to a player moves 1 to left
-    case "ArrowUp":
-      enemy.velocity.y = -15;
-      break; // if key is equal to a player moves 1 to up
-    case "ArrowDown":
-      enemy.attack();
-      break; // if key is equal to a player attack function gets fired
+  ////player
+  if (!player.dead) {
+    switch (event.key) {
+      case "d":
+        keys.d.pressed = true;
+        player.lastKey = "d";
+        break; // if key is equal to d player moves 1 to right
+      case "a":
+        keys.a.pressed = true;
+        player.lastKey = "a";
+        break; // if key is equal to a player moves 1 to left
+      case "w":
+        player.velocity.y = -15;
+        break; // if key is equal to a player moves 1 to up
+      case " ":
+        player.attack();
+        break; // if space is equal to a player attack
+    }
+  }
+  ////enemy
+  if (!enemy.dead) {
+    switch (event.key) {
+      case "ArrowRight":
+        keys.ArrowRight.pressed = true;
+        enemy.lastKey = "ArrowRight";
+        break; // if key is equal to d player moves 1 to right
+      case "ArrowLeft":
+        keys.ArrowLeft.pressed = true;
+        enemy.lastKey = "ArrowLeft";
+        break; // if key is equal to a player moves 1 to left
+      case "ArrowUp":
+        enemy.velocity.y = -15;
+        break; // if key is equal to a player moves 1 to up
+      case "ArrowDown":
+        enemy.attack();
+        break; // if key is equal to a player attack function gets fired
+    }
   }
 });
 
