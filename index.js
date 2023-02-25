@@ -234,6 +234,9 @@ function animatieSprites() {
   ctx.fillRect(0, 0, 1024, 576); //not drawing anything
   background.update();
   shop.update();
+  // contrast background
+  ctx.fillStyle = 'rgba(255, 255, 255, 0.15)';
+  ctx.fillRect(0, 0, canvasElement.width, canvasElement.height);
   player.moveSprite();
   enemy.moveSprite();
 
@@ -279,7 +282,9 @@ function animatieSprites() {
   ) {
     enemy.takeHit();
     player.isAttacking = false;
-    document.querySelector("#enemyHealth").style.width = enemy.health + "%";
+    gsap.to("#enemyHealth", {
+      width: enemy.health + "%"
+    });
   }
 
   if (player.isAttacking && player.framesCurrent === 4) player.isAttacking = false;
@@ -294,7 +299,9 @@ function animatieSprites() {
   ) {
     player.takeHit();
     enemy.isAttacking = false;
-    document.querySelector("#playerHealth").style.width = player.health + "%";
+    gsap.to("#playerHealth", {
+      width: player.health + "%"
+    });
   }
 
   if (enemy.isAttacking && enemy.framesCurrent === 2) enemy.isAttacking = false;
