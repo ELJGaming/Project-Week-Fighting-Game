@@ -158,6 +158,7 @@ function determineWinner({ player, enemy, timerId }) {
     clearTimeout(timerId);
     resultTextElement.style.display = 'flex';
     if (player.health === enemy.health) {
+      document.getElementById('restBtn').style.display = 'flex';
       resultTextElement.innerText = 'Tie';
     } else if (player.health > enemy.health) {
       resultTextElement.innerText = 'Player 1 Wins';
