@@ -24,31 +24,143 @@ const resultTextElement = document.querySelector('#displayResult');
 /////////////
 //BackGround
 ////////////
-// const background = new Sprite({
-//   position: {
-//     x: 0,
-//     y: 0
-//   },
-//   imageSrc: './img/backgrounds/background-default.png'
-// });
-
-// const shop = new Sprite({
-//   position: {
-//     x: 625,
-//     y: 128
-//   },
-//   imageSrc: './img/backgrounds/shop.png',
-//   scale: 2.75,
-//   framesMax: 6
-// });
-
 const background = new Sprite({
   position: {
     x: 0,
     y: 0
   },
-  imageSrc: './img/backgrounds/fighting-background-1.gif'
+  imageSrc: './img/backgrounds/background-default.png'
 });
+
+const shop = new Sprite({
+  position: {
+    x: 625,
+    y: 128
+  },
+  imageSrc: './img/backgrounds/shop.png',
+  scale: 2.75,
+  framesMax: 6
+});
+
+// const background = new Sprite({
+//   position: {
+//     x: 0,
+//     y: 0
+//   },
+//   imageSrc: './img/backgrounds/fighting-background-1.gif'
+// });
+
+// const player = new Fighter({
+//   position: {
+//     x: canvasElement.width * 0.4,
+//     y: 15,
+//   },
+//   velocity: {
+//     x: 0,
+//     y: 0,
+//   },
+//   offset: {
+//     x: 215,
+//     y: 150,
+//   },
+//   imageSrc: './img/Huntress/Idle.png',
+//   framesMax: 8,
+//   scale: 3,
+//   sprites: {
+//     idle: {
+//       imageSrc: './img/Huntress/Idle.png',
+//       framesMax: 8
+//     },
+//     run: {
+//       imageSrc: './img/Huntress/Run.png',
+//       framesMax: 8
+//     },
+//     jump: {
+//       imageSrc: './img/Huntress/Jump.png',
+//       framesMax: 2
+//     },
+//     fall: {
+//       imageSrc: './img/Huntress/Fall.png',
+//       framesMax: 2
+//     },
+//     attack1: {
+//       imageSrc: './img/Huntress/Attack1.png',
+//       framesMax: 5
+//     },
+//     takeHit: {
+//       imageSrc: './img/Huntress/Take hit.png',
+//       framesMax: 3
+//     },
+//     death: {
+//       imageSrc: './img/Huntress/Death.png',
+//       framesMax: 8
+//     }
+//   },
+//   attackBox: {
+//     offset: {
+//       x: 100,
+//       y: 50
+//     },
+//     width: 160,
+//     height: 50
+//   }
+// });
+
+// const player = new Fighter({
+//   position: {
+//     x: canvasElement.width * 0.4,
+//     y: 15,
+//   },
+//   velocity: {
+//     x: 0,
+//     y: 0,
+//   },
+//   offset: {
+//     x: 215,
+//     y: 105,
+//   },
+//   imageSrc: './img/Fantasy Warrior/Idle.png',
+//   framesMax: 10,
+//   scale: 2.5,
+//   sprites: {
+//     idle: {
+//       imageSrc: './img/Fantasy Warrior/Idle.png',
+//       framesMax: 10
+//     },
+//     run: {
+//       imageSrc: './img/Fantasy Warrior/Run.png',
+//       framesMax: 8
+//     },
+//     jump: {
+//       imageSrc: './img/Fantasy Warrior/Jump.png',
+//       framesMax: 3
+//     },
+//     fall: {
+//       imageSrc: './img/Fantasy Warrior/Fall.png',
+//       framesMax: 3
+//     },
+//     attack1: {
+//       imageSrc: './img/Fantasy Warrior/Attack1.png',
+//       framesMax: 7
+//     },
+//     takeHit: {
+//       imageSrc: './img/Fantasy Warrior/Take hit.png',
+//       framesMax: 3
+//     },
+//     death: {
+//       imageSrc: './img/Fantasy Warrior/Death.png',
+//       framesMax: 7
+//     }
+//   },
+//   attackBox: {
+//     offset: {
+//       x: 100,
+//       y: 50
+//     },
+//     width: 160,
+//     height: 50
+//   }
+// });
 
 /////////////
 //Player
@@ -233,10 +345,10 @@ function animatieSprites() {
   ctx.fillStyle = "black"; // black canvas
   ctx.fillRect(0, 0, 1024, 576); //not drawing anything
   background.update();
-  // shop.update();
+  shop.update();
   // contrast background
-  ctx.fillStyle = 'rgba(255, 255, 255, 0.15)';
-  ctx.fillRect(0, 0, canvasElement.width, canvasElement.height);
+  // ctx.fillStyle = 'rgba(255, 255, 255, 0.15)';
+  // ctx.fillRect(0, 0, canvasElement.width, canvasElement.height);
   player.moveSprite();
   enemy.moveSprite();
 
