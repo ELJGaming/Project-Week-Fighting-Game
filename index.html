@@ -6,61 +6,104 @@
         * {
             box-sizing: border-box;
         }
-        #endGameScreen{
+
+        #endGameScreen {
             font-family: 'Press Start 2P', cursive;
             font-size: 50px;
             position: absolute;
-            display: flex;
+            /* here you would want to change this property in js to display flex */
+            display: none;
             justify-content: center;
             align-items: center;
             text-align: center;
-            top:0; 
-            bottom: 0; 
-            left: 0; 
-            right: 0; 
-            background-color: rgba(128,128,128, 0.7); 
-            color:aliceblue;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(128, 128, 128, 0.7);
+            color: aliceblue;
         }
-        #container{
+        #pauseScreen{
+            font-family: 'Press Start 2P', cursive;
+            font-size: 50px;
+            position: absolute;
+            /* here you would want to change this property in js to display flex */
+            display: none;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(128, 128, 128, 0.7);
+            color: aliceblue;
+        }
+
+        #container {
             animation-name: bounceIn;
             animation-duration: 3s;
             animation-delay: 1s;
         }
-        #restartBtn{
+
+        #restartBtn {
             font-family: 'Press Start 2P', cursive;
-            font-size:2rem;
-            background-color: aliceblue;
-            border: 5px solid black;
-            border-radius: 12px;   
-        }
-        #restartBtn:hover{
-            background-color: black;
-            color:aliceblue;
-            border-color: aliceblue ;
-            animation-name: bounceIn;
-            animation-duration: 3s;
-            animation-iteration-count: infinite;
-        }
-        #menuBtn{
-            /* display:; */
-            font-family: 'Press Start 2P', cursive;
-            font-size:2rem;
+            font-size: 2rem;
             background-color: aliceblue;
             border: 5px solid black;
             border-radius: 12px;
-            /* animation-name: bounceIn;
-            animation-duration: 3s;
-            animation-delay: 1s;
-            animation-fill-mode: forwards; */
-        } #menuBtn:hover{
-            background-color: black;
-            color:aliceblue;
-            border-color: aliceblue ;
-            animation-name: bounceIn;
-            animation-duration: 3s;
-            animation-iteration-count: infinite;
         }
 
+        #restartBtn:hover {
+            background-color: black;
+            color: aliceblue;
+            border-color: aliceblue;
+            cursor: pointer;
+        }
+
+        #menuBtn {
+            font-family: 'Press Start 2P', cursive;
+            font-size: 2rem;
+            background-color: aliceblue;
+            border: 5px solid black;
+            border-radius: 12px;
+        }
+
+        #menuBtn:hover {
+            background-color: black;
+            color: aliceblue;
+            border-color: aliceblue;
+            cursor: pointer;
+        }
+        #controlBtns{
+            font-family: 'Press Start 2P', cursive;
+            font-size: 2rem;
+            background-color: aliceblue;
+            border: 5px solid black;
+            border-radius: 12px;
+        }
+        #controlBtns:hover{
+            background-color: black;
+            color: aliceblue;
+            border-color: aliceblue;
+            cursor: pointer;
+        }
+        #pauseBtn{
+            position: absolute;
+            top:5;
+            left:820;
+            font-family: 'Press Start 2P', cursive;
+            font-size: 2rem;
+            background-color: aliceblue;
+            border: 5px solid black;
+            border-radius: 12px;
+        }
+        #pauseBtn:hover{
+            cursor: pointer;
+            background-color: black;
+            color: aliceblue;
+            border-color: aliceblue;
+        }
     </style>
 </head>
 
@@ -85,19 +128,29 @@
                 <div id="enemyHealth"
                     style="position:absolute; background-color: blue; top: 0; left: 0; right:0; bottom: 0;"></div>
             </div>
+            <button id = 'pauseBtn'>Pause</button>
         </div>
+
         <div id="displayResult"
             style="position: absolute; color: white; border-color:1px solid black;display: none; align-items: center; justify-content: center; top: 0; left: 0; bottom: 0; right: 0;">
             Tie</div>
         <canvas></canvas>
 
         <!-- Add the feature displayResult below so this div would pop up saying End Game and option to restart -->
-        <div id = "endGameScreen">
-            <div id = 'container'>
-                <p>Player 1 Winner!!!</p> 
-                <button id= 'restartBtn'>Restart</button>
-                <button id= 'menuBtn'>Menu</button>
-            </div>  
+        <div id="endGameScreen">
+            <div id='container'>
+                <p>Player 1 Winner!!!</p>
+                <button id='restartBtn'>Restart</button>
+                <button id='menuBtn'>Menu</button>
+            </div>
+        </div>
+        <div id="pauseScreen">
+            <div id='container'>
+                <p>Pause</p>
+                <button id='controlBtns'>Controls</button>
+                <button id='restartBtn'>Restart</button>
+                <button id='menuBtn'>Menu</button>
+            </div>
         </div>
     </div>
 
