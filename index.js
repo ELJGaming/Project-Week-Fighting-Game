@@ -31,7 +31,7 @@ const background = new Sprite({
     x: 0,
     y: 0
   },
-  imageSrc: './img/backgrounds/background-default.png'
+  imageSrc: './img/backgrounds/fighting-background-1.gif'
 });
 
 const shop = new Sprite({
@@ -40,7 +40,7 @@ const shop = new Sprite({
     y: 128
   },
   imageSrc: './img/backgrounds/shop.png',
-  scale: 2.75,
+  scale: 0,
   framesMax: 6
 });
 
