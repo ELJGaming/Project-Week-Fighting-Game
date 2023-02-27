@@ -1,11 +1,7 @@
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
-const selectMap = document.getElementById("selectMap");
+//const selectMap = document.getElementById("selectMap").play();
 //begin playback of the media file
-const toggleMusicButton = document.getElementById("button1");
-toggleMusicButton.addEventListener("click", () => {
-  selectMap.paused ? selectMap.play() : selectMap.pause();
-});
       // let selectedCharacter = null;
 
       // characters.forEach((character) => {

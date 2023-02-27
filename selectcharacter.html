@@ -2,12 +2,14 @@
 <html>
   <head>
     <link rel="stylesheet" href="selectcharacter.css">
+    <link rel="stylesheet" href="buttonfix.css">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <title>Character Selection</title>
   </head>
   <body>
+    <div id = 'container'>
     <canvas id="canvas"></canvas>
-    <button id="button1">Music</button>
+    
     <div id="characters">
       <div class="character" id="character1">
         <img src="sword.jpg">
@@ -38,5 +40,7 @@
       <source src="selectcharacter.mp3">
        Your browser does not support the audio element.
      </audio>
+    </div>
+    
     <script src = "selectcharacter.js"></script>
   </body>

@@ -4,6 +4,7 @@
   <title>Begin Page</title>
   <meta charset="UTF-8">
   <link rel="stylesheet" type="text/css" href="start.css">
+  <link rel="stylesheet" href="buttonfix.css">
   <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,14 +12,19 @@
 </head>
 <body>
   
+  <div id = 'container'>
   <canvas id="myCanvas"></canvas>
+      <button id="button1">Music</button>
 
-  <button id="button1">Music</button>
-     <!-- Start button -->
-     <button id="start-button" class="retro-button" onclick=" window.location.href= 'load.html';">Start</button>
+    <!-- Start button -->
+    <button id="start-button" class="retro-button" onclick=" window.location.href= 'load.html';">Start</button>
+     
+    <!-- Play Now -->
+    <button id="play-now-button" class="retro-button" onclick=" window.location.href= 'index.html';">Play Now</button>
 
-     <!-- How to Play button -->
-     <button id="how-to-play-button" class="retro-button" onclick=" window.location.href= 'howToPlay.html';">How to Play</button>
+    <!-- How to Play button -->
+    <button id="how-to-play-button" class="retro-button" onclick=" window.location.href= 'howToPlay.html';">How to Play</button>
+
 
 
      <h1 id="gameName">Fight For Ethan</h1>
@@ -26,7 +32,7 @@
    <source src="start.mp3">
     Your browser does not support the audio element.
   </audio>
-
+</div>
 
   <script src="start.js"></script>
 </body>
