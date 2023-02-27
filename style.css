@@ -3,6 +3,17 @@
     font-family: 'Press Start 2P', cursive;
 }
 
+#identityPlayer2{
+    position: absolute;
+    color: white;
+    left:855px;
+}
+#identityPlayer1{
+    position:absolute;
+    color:white;
+    left:42px;
+}
+
 #timer {
     background-color: black;
     color: white;
