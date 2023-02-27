@@ -1,0 +1,99 @@
+canvas {
+  border: 1px solid black;
+  background-image: url('start.gif'); 
+  background-repeat: no-repeat;
+}
+
+#button1{
+  position: absolute;
+  top: 8.75px;
+  right: 567px;
+  padding: 5px;
+  background-color: transparent;
+      color: #ffffff;
+      border: none;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      border-radius: 8px;
+      box-shadow: 0 4px #999;
+      font-family: 'Press Start 2P', cursive;
+      cursor: pointer; /* Mouse pointer on hover */
+}
+
+
+
+/* Darker background on mouse-over */
+#button1:hover {
+  background-color: rgb(123, 45, 6);
+}
+
+/* Game name animation */
+#gameName {
+  position: absolute;
+  top: 90px;
+  left: 9%;
+  font-size: 50px;
+  font-family: 'Press Start 2P', cursive;
+  text-transform: uppercase;
+  color: white;
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+  opacity: 0;
+  animation-name: bounceIn;
+  animation-duration: 4s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+  
+}
+    /* Styling for the retro 2D button */
+    .retro-button {
+      background-color: #b5b5b5;
+      color: #ffffff;
+      border: none;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      border-radius: 8px;
+      box-shadow: 0 4px #999;
+      font-family: 'Press Start 2P', cursive;
+    }
+    
+    /* Styling for the Start button */
+    #start-button {
+      background-color:transparent;
+      font-weight: bold;
+      text-shadow: 0 1px 0 #135c81;
+      position: absolute;
+      top: 280px;
+      left: 28.5%;
+      font-size: 13px;
+      cursor: pointer; /* Mouse pointer on hover */
+
+    }
+    
+    /* Styling for the How to Play button */
+    #how-to-play-button {
+      background-color: transparent;
+      font-weight: bold;
+      text-shadow: 0 1px 0 #b36900;
+      position: absolute;
+      top: 350px;
+      left: 25%;
+      font-size: 13px;
+      cursor: pointer; /* Mouse pointer on hover */
+    }
+  
+    /* Darker background on mouse-over */
+    #start-button:hover {
+  background-color: RoyalBlue;
+}
+
+#how-to-play-button:hover {
+    background-color:#b36900
+  }

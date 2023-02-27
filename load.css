@@ -1,0 +1,41 @@
+canvas {
+    border: 1px solid black;
+    background-image: url('load.jpg'); 
+  }
+
+#loading {
+    position: absolute;
+    top: 90px;
+    left: 650px;
+    font-family: 'Press Start 2P', cursive;
+    color:white;
+
+
+}
+
+#loading {
+    font-size: 28px;
+    text-align: center;
+  }
+  
+  #loading span {
+    opacity: 0;
+    animation: fadeIn 3s ease-in-out infinite;
+    display: inline-block;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-50%);
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(50%);
+    }
+  }
+  
