@@ -76,7 +76,7 @@ const player = new Fighter({
   },
   offset: {
     x: 215,
-    y: 140,
+    y: 141,
   },
   imageSrc: './img/Huntress/Idle.png',
   framesMax: 8,
