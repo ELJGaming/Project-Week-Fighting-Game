@@ -2,10 +2,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <style>
         * {
             box-sizing: border-box;
-            font-family: 'Press Start 2P', cursive;
+            /* font-family: 'Press Start 2P', cursive; */
         }
 
         #endGameScreen {
@@ -89,9 +90,9 @@
             top:5;
             left:820;
             font-size: 2rem;
-            background-color: aliceblue;
+            /* background-color: aliceblue;
             border: 5px solid black;
-            border-radius: 12px;
+            border-radius: 12px; */
         }
         #pauseBtn:hover{
             cursor: pointer;
@@ -178,8 +179,8 @@
         }
         #pauseBtn{
             position: absolute;
-            top:5;
-            left:820;
+            top:75;
+            left:490;
             font-size: 2rem;
             background-color: aliceblue;
             border: 5px solid black;
@@ -211,7 +212,7 @@
                 <div style="background-color: red; height: 30px;"></div>
                 <div id="enemyHealth" style="position:absolute; background-color: blue; top: 0; left: 0; right:0; bottom: 0;"></div>
             </div>
-            <button id = 'pauseBtn'>Pause</button>
+            <button id = 'pauseBtn'><i class="fa-solid fa-pause"></i></button>
         </div>
 
         <div id="displayResult"
