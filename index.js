@@ -291,13 +291,8 @@ const keys = {
   },
   ArrowLeft: {
     pressed: false,
-  },
-  // ArrowDown: {
-  //   pressed: false,
-  // },
+  }
 };
-
-// let lastKey; //show last key that was pressed
 
 function rectanglarCollision({ rectangle1, rectangle2 }) {
   return (
@@ -309,6 +304,12 @@ function rectanglarCollision({ rectangle1, rectangle2 }) {
     rectangle2.position.y &&
     rectangle1.attackBox.position.y <= rectangle2.position.y + rectangle2.height
   );
+}
+
+function borderCollision(player) {
+  return (
+    player.position.x - 5 <= 0 || player.position.x + player.width + 5 >= canvasElement.width
+  )
 }
 
 // determines winner
@@ -354,6 +355,8 @@ function animatieSprites() {
 
   player.velocity.x = 0; // default value player isnt moving
   enemy.velocity.x = 0; // default value enemy isnt moving
+
+  if (!borderCollision(player)) {}
 
   //Player Movement
   if (keys.a.pressed && player.lastKey === "a") {
@@ -486,8 +489,5 @@ window.addEventListener("keyup", (event) => {
     case "ArrowRight":
       keys.ArrowRight.pressed = false;
       break; // if key is presssed player does not move left
-    // case "ArrowDown":
-    //   keys.ArrowDown.pressed = false;
-    //   break;
   }
 });
