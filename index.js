@@ -6,6 +6,10 @@
 const canvasElement = document.querySelector("canvas");
 //context responsible for shapes and sprites
 const ctx = canvasElement.getContext("2d"); //2d game
+// canvasElement.save();
+// canvasElement.scale(-1,1);
+// canvasElement.restore();
+
 
 // size of screen
 canvasElement.width = 1024;
@@ -52,65 +56,73 @@ const shop = new Sprite({
 //   imageSrc: './img/backgrounds/fighting-background-1.gif'
 // });
 
-// const player = new Fighter({
-//   position: {
-//     x: canvasElement.width * 0.4,
-//     y: 15,
-//   },
-//   velocity: {
-//     x: 0,
-//     y: 0,
-//   },
-//   offset: {
-//     x: 215,
-//     y: 150,
-//   },
-//   imageSrc: './img/Huntress/Idle.png',
-//   framesMax: 8,
-//   scale: 3,
-//   sprites: {
-//     idle: {
-//       imageSrc: './img/Huntress/Idle.png',
-//       framesMax: 8
-//     },
-//     run: {
-//       imageSrc: './img/Huntress/Run.png',
-//       framesMax: 8
-//     },
-//     jump: {
-//       imageSrc: './img/Huntress/Jump.png',
-//       framesMax: 2
-//     },
-//     fall: {
-//       imageSrc: './img/Huntress/Fall.png',
-//       framesMax: 2
-//     },
-//     attack1: {
-//       imageSrc: './img/Huntress/Attack1.png',
-//       framesMax: 5
-//     },
-//     takeHit: {
-//       imageSrc: './img/Huntress/Take hit.png',
-//       framesMax: 3
-//     },
-//     death: {
-//       imageSrc: './img/Huntress/Death.png',
-//       framesMax: 8
-//     }
-//   },
-//   attackBox: {
-//     offset: {
-//       x: 100,
-//       y: 50
-//     },
-//     width: 160,
-//     height: 50
-//   }
-// });
+/////////////
+//Player
+////////////
 
-// const player = new Fighter({
+const player = new Fighter({
+  position: {
+    x: canvasElement.width * 0.4,
+    y: 15,
+  },
+  velocity: {
+    x: 0,
+    y: 0,
+  },
+  offset: {
+    x: 215,
+    y: 150,
+  },
+  imageSrc: './img/Huntress/Idle.png',
+  framesMax: 8,
+  scale: 3,
+  sprites: {
+    idle: {
+      imageSrc: './img/Huntress/Idle.png',
+      framesMax: 8
+    },
+    run: {
+      imageSrc: './img/Huntress/Run.png',
+      framesMax: 8
+    },
+    jump: {
+      imageSrc: './img/Huntress/Jump.png',
+      framesMax: 2
+    },
+    fall: {
+      imageSrc: './img/Huntress/Fall.png',
+      framesMax: 2
+    },
+    attack1: {
+      imageSrc: './img/Huntress/Attack1.png',
+      framesMax: 5
+    },
+    takeHit: {
+      imageSrc: './img/Huntress/Take hit.png',
+      framesMax: 3
+    },
+    death: {
+      imageSrc: './img/Huntress/Death.png',
+      framesMax: 8
+    }
+  },
+  attackBox: {
+    offset: {
+      x: 8,
+      y: 50
+    },
+    width: 160,
+    height: 50
+  }
+});
+
+/////////////
+//ENEMY
+////////////
+
+// const enemy = new Fighter({
 //   position: {
-//     x: canvasElement.width * 0.4,
+//     x: canvasElement.width * 0.8,
 //     y: 15,
 //   },
 //   velocity: {
@@ -167,61 +179,61 @@ const shop = new Sprite({
 /////////////
 //Player
 ////////////
-const player = new Fighter({
-  position: {
-    x: canvasElement.width * 0.4,
-    y: 15,
-  },
-  velocity: {
-    x: 0,
-    y: 0,
-  },
-  offset: {
-    x: 215,
-    y: 157,
-  },
-  imageSrc: './img/samauriMack/Idle.png',
-  framesMax: 8,
-  scale: 2.5,
-  sprites: {
-    idle: {
-      imageSrc: './img/samauriMack/Idle.png',
-      framesMax: 8
-    },
-    run: {
-      imageSrc: './img/samauriMack/Run.png',
-      framesMax: 8
-    },
-    jump: {
-      imageSrc: './img/samauriMack/Jump.png',
-      framesMax: 2
-    },
-    fall: {
-      imageSrc: './img/samauriMack/Fall.png',
-      framesMax: 2
-    },
-    attack1: {
-      imageSrc: './img/samauriMack/Attack1.png',
-      framesMax: 6
-    },
-    takeHit: {
-      imageSrc: './img/samauriMack/Take Hit - white silhouette.png',
-      framesMax: 4
-    },
-    death: {
-      imageSrc: './img/samauriMack/Death.png',
-      framesMax: 6
-    }
-  },
-  attackBox: {
-    offset: {
-      x: 100,
-      y: 50
-    },
-    width: 160,
-    height: 50
-  }
-});
+// const player = new Fighter({
+//   position: {
+//     x: canvasElement.width * 0.4,
+//     y: 15,
+//   },
+//   velocity: {
+//     x: 0,
+//     y: 0,
+//   },
+//   offset: {
+//     x: 215,
+//     y: 157,
+//   },
+//   imageSrc: './img/samauriMack/Idle.png',
+//   framesMax: 8,
+//   scale: 2.5,
+//   sprites: {
+//     idle: {
+//       imageSrc: './img/samauriMack/Idle.png',
+//       framesMax: 8
+//     },
+//     run: {
+//       imageSrc: './img/samauriMack/Run.png',
+//       framesMax: 8
+//     },
+//     jump: {
+//       imageSrc: './img/samauriMack/Jump.png',
+//       framesMax: 2
+//     },
+//     fall: {
+//       imageSrc: './img/samauriMack/Fall.png',
+//       framesMax: 2
+//     },
+//     attack1: {
+//       imageSrc: './img/samauriMack/Attack1.png',
+//       framesMax: 6
+//     },
+//     takeHit: {
+//       imageSrc: './img/samauriMack/Take Hit - white silhouette.png',
+//       framesMax: 4
+//     },
+//     death: {
+//       imageSrc: './img/samauriMack/Death.png',
+//       framesMax: 6
+//     }
+//   },
+//   attackBox: {
+//     offset: {
+//       x: 100,
+//       y: 50
+//     },
+//     width: 160,
+//     height: 50
+//   }
+// });
 /////////////
 //Enemy
 ////////////
