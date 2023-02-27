@@ -3,7 +3,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
-    <link rel = 'stylesheet' href="style.css">
+    <link rel='stylesheet' href="style.css">
 </head>
 
 <body>
@@ -12,20 +12,22 @@
         <!-- Smaller Red Container -->
         <div style="position: absolute; display: flex;width: 100%;align-items: center;padding:20px">
             <!-- Player health -->
-            <div style="position: relative; width: 100%; display: flex; justify-content: flex-end; border-top: 4px solid white; border-left: 4px solid white; border-bottom: 4px solid white;">
+            <div
+                style="position: relative; width: 100%; display: flex; justify-content: flex-end; border-top: 4px solid white; border-left: 4px solid white; border-bottom: 4px solid white;">
                 <div style="background-color: red; height: 30px;width: 100%;"></div>
                 <div id="playerHealth"></div>
             </div>
-            <p id = 'identityPlayer1'>Player 1</p>
+            <p id='identityPlayer1'>Player 1</p>
             <!-- Timer -->
-            <div  id="timer">10</div>
+            <div id="timer">10</div>
             <!-- Enemy Health -->
-            <div style="position: relative; width: 100%; border-top: 4px solid white; border-right: 4px solid white; border-bottom: 4px solid white;">
+            <div
+                style="position: relative; width: 100%; border-top: 4px solid white; border-right: 4px solid white; border-bottom: 4px solid white;">
                 <div style="background-color: red; height: 30px;"></div>
                 <div id="enemyHealth"></div>
             </div>
-            <p id = 'identityPlayer2'>Player 2</p>
-            <button onclick ="pressedPause()" id = 'pauseBtn'><i class="fa-solid fa-pause"></i></button>
+            <p id='identityPlayer2'>Player 2</p>
+            <button onclick="pressedPause()" id='pauseBtn'><i class="fa-solid fa-pause"></i></button>
         </div>
 
         <!-- <div id="displayResult">
@@ -35,33 +37,48 @@
         <!-- Add the feature displayResult below so this div would pop up saying End Game and option to restart -->
         <div id="endGameScreen" style="display: none;">
             <div id='container' style="animation-delay: 0s;">
-                <p id = 'result'></p>
-                <button id='restartBtn' onclick = "window.location.reload();">Restart</button>
-                <button id='menuBtn' onclick=" window.location.href= 'start.html';" >Menu</button>
+                <p id='result'></p>
+                <button id='restartBtn' onclick="window.location.reload();">Restart</button>
+                <button id='menuBtn' onclick=" window.location.href= 'start.html';">Menu</button>
             </div>
         </div>
         <div id="pauseScreen">
             <div id='container' style="animation-delay:0s;">
                 <p>PAUSE</p>
-                <button id='controlBtns' onclick = "howToPlayFunction()">Controls</button>
-                <button id='restartBtn' onclick = "window.location.reload();">Restart</button>
-                <button id='menuBtn'  onclick=" window.location.href= 'start.html';">Menu</button>
+                <button id='controlBtns' onclick="howToPlayFunction()">Controls</button>
+                <button id='restartBtn' onclick="window.location.reload();">Restart</button>
+                <button id='menuBtn' onclick=" window.location.href= 'start.html';">Menu</button>
             </div>
-            <button onclick = 'pressedResume()' id = 'resumeBtn'><i class="fa-solid fa-play"></i></button>
+            <button onclick='pressedResume()' id='resumeBtn'><i class="fa-solid fa-play"></i></button>
         </div>
-        <div id = "controlScreen">
-            <div id = 'container'>
+        <div id="controlScreen">
+            <div id='container'>
                 <p>Button Layout</p>
-                <ul>
-                    <li>Use the "Up" "Down" "Left" and "Right" arrow keys to move your character around</li> 
-                    <li>Press the "" key to attack with your weapon.</li> 
-                    <li>Aim your weapon at the enemy using the arrow keys</li> 
-                </ul>
+                <div style="display: flex; flex-direction: row;">
+                    <div>
+                        <p style='font-size: 25px;'>Player 1</p>
+                        <ul>
+                            <li>"A" "D" and "W" arrow keys to move your character around</li>
+                            <li>"Space" key to attack with your weapon</li>
+                            <li>Aim your weapon at the enemy using the 'A''W''D' keys</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p style="font-size: 25px;">Player 2</p>
+                        <ul>
+                            <li>"Up" "Left" and "Right" arrow keys to move your character around</li>
+                            <li>"Down" arrow key to attack with your weapon</li>
+                            <li>Aim your weapon at the enemy using the arrow keys</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <button onclick = 'pressedResume()' id = 'resumeBtn'><i class="fa-solid fa-play"></i></button>
+            <button onclick='pressedResume()' id='resumeBtn'><i class="fa-solid fa-play"></i></button>
         </div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js" integrity="sha512-f8mwTB+Bs8a5c46DEm7HQLcJuHMBaH/UFlcgyetMqqkvTcYg4g5VXsYR71b3qC82lZytjNYvBj2pf0VekA9/FQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"
+        integrity="sha512-f8mwTB+Bs8a5c46DEm7HQLcJuHMBaH/UFlcgyetMqqkvTcYg4g5VXsYR71b3qC82lZytjNYvBj2pf0VekA9/FQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="classes.js"></script>
     <script src="index.js"></script>
 </body>
