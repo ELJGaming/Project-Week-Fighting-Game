@@ -35,15 +35,26 @@
             <div id='container' style="animation-delay: 0s;">
                 <p id = 'result'></p>
                 <button id='restartBtn'>Restart</button>
-                <button id='menuBtn'>Menu</button>
+                <button id='menuBtn' onclick=" window.location.href= 'start.html';" >Menu</button>
             </div>
         </div>
         <div id="pauseScreen">
             <div id='container' style="animation-delay:0s;">
                 <p>PAUSE</p>
-                <button id='controlBtns'>Controls</button>
+                <button id='controlBtns' onclick = "howToPlayFunction()">Controls</button>
                 <button id='restartBtn'>Restart</button>
-                <button id='menuBtn'>Menu</button>
+                <button id='menuBtn'  onclick=" window.location.href= 'start.html';">Menu</button>
+            </div>
+            <button onclick = 'pressedResume()' id = 'resumeBtn'><i class="fa-solid fa-play"></i></button>
+        </div>
+        <div id = "controlScreen">
+            <div id = 'container'>
+                <p>Button Layout</p>
+                <ul>
+                    <li>Use the arrow keys to move your character around.</li> 
+                    <li>Press the "Z" key to attack with your weapon.</li> 
+                    <li>Aim your weapon at the enemy using the arrow keys</li> 
+                </ul>
             </div>
             <button onclick = 'pressedResume()' id = 'resumeBtn'><i class="fa-solid fa-play"></i></button>
         </div>

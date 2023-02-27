@@ -67,6 +67,23 @@
     color: aliceblue;
 }
 
+#controlScreen{
+    font-size: 50px;
+    position: absolute;
+    /* here you would want to change this property in js to display flex */
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(128, 128, 128, 0.7);
+    color: aliceblue;
+}
+
 #container {
     animation-name: bounceIn;
     animation-duration: 3s;
@@ -129,4 +146,7 @@
     background-color: black;
     color: aliceblue;
     border-color: aliceblue;
+}
+ul{
+    font-size: 15px;
 }

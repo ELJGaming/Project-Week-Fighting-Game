@@ -25,7 +25,12 @@ const gravity = 0.7; // downward acceleration to objects
 
 const endScreen = document.querySelector('#endGameScreen');
 const resultTextElement = document.querySelector('#result');
-const screenPause = document.querySelector('#pauseScreen')
+const screenPause = document.querySelector('#pauseScreen');
+const controlScreen = document.querySelector('#controlScreen');
+
+// function hrefMenu(){
+//   windows.location.href = 'start.html';
+// }
 
 /////////////
 //BackGround
@@ -338,6 +343,11 @@ function pressedPause(){
 function pressedResume(){
   decrementTimer();
   screenPause.style.display = 'none';
+  controlScreen.style.display = 'none';
+}
+function howToPlayFunction(){
+  screenPause.style.display = 'none';
+  controlScreen.style.display = 'flex';
 }
 
 // determines winner
