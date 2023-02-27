@@ -1,6 +1,6 @@
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
-const characterMusic = document.getElementById('selectcharacterMusic')
+const characterMusic = document.getElementById('selectcharacterMusic')//.play()
 const toggleMusic = document.getElementById("button1");
     toggleMusic.addEventListener("click", () => {
       characterMusic.paused ? characterMusic.play() : characterMusic.pause();

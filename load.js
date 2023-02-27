@@ -4,7 +4,6 @@ const ctx = canvas.getContext('2d');
 //     setTimeout(function(){
 //         window.location.href='selectcharacter.html'
 //     },5000);}
- 
 
      
 

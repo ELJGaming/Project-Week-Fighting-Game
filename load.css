@@ -10,4 +10,32 @@ canvas {
     font-family: 'Press Start 2P', cursive;
     color:white;
 
+
 }
+
+#loading {
+    font-size: 28px;
+    text-align: center;
+  }
+  
+  #loading span {
+    opacity: 0;
+    animation: fadeIn 3s ease-in-out infinite;
+    display: inline-block;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-50%);
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(50%);
+    }
+  }
+  
