@@ -21,6 +21,7 @@ const gravity = 0.7; // downward acceleration to objects
 
 const endScreen = document.querySelector('#endGameScreen');
 const resultTextElement = document.querySelector('#result');
+const screenPause = document.querySelector('#pauseScreen')
 
 /////////////
 //BackGround
@@ -316,16 +317,27 @@ function borderCollision(player) {
   )
 }
 
+//PAUSE button
+function pressedPause(){
+  screenPause.style.display = 'flex';
+  clearTimeout(timerId);
+}
+//Resume
+function pressedResume(){
+  decrementTimer();
+  screenPause.style.display = 'none';
+}
+
 // determines winner
 function determineWinner({ player, enemy, timerId }) {
   clearTimeout(timerId);
   endScreen.style.display = 'flex';
   if (player.health === enemy.health) {
-    resultTextElement.innerText = 'Tie';
+    resultTextElement.innerText = 'TIE';
   } else if (player.health > enemy.health) {
-    resultTextElement.innerText = 'Player 1 Wins';
+    resultTextElement.innerText = 'PLAYER 1 WINS';
   } else if (player.health < enemy.health) {
-    resultTextElement.innerText = 'Player 2 Wins';
+    resultTextElement.innerText = 'PLAYER 2 WINS';
   }
 }
 

@@ -23,7 +23,7 @@
                 <div style="background-color: red; height: 30px;"></div>
                 <div id="enemyHealth"></div>
             </div>
-            <button id = 'pauseBtn'><i class="fa-solid fa-pause"></i></button>
+            <button onclick ="pressedPause()" id = 'pauseBtn'><i class="fa-solid fa-pause"></i></button>
         </div>
 
         <!-- <div id="displayResult">
@@ -39,12 +39,13 @@
             </div>
         </div>
         <div id="pauseScreen">
-            <div id='container'>
-                <p>Pause</p>
+            <div id='container' style="animation-delay:0s;">
+                <p>PAUSE</p>
                 <button id='controlBtns'>Controls</button>
                 <button id='restartBtn'>Restart</button>
                 <button id='menuBtn'>Menu</button>
             </div>
+            <button onclick = 'pressedResume()' id = 'resumeBtn'><i class="fa-solid fa-play"></i></button>
         </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js" integrity="sha512-f8mwTB+Bs8a5c46DEm7HQLcJuHMBaH/UFlcgyetMqqkvTcYg4g5VXsYR71b3qC82lZytjNYvBj2pf0VekA9/FQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>

@@ -64,6 +64,7 @@
     position: absolute;
     /* here you would want to change this property in js to display flex */
     display: none;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -78,7 +79,6 @@
 #container{
     animation-name: bounceIn;
     animation-duration: 1s;
-    animation-delay: 0s;
 }
 
 #restartBtn {
@@ -103,6 +103,22 @@
 }
 
 #menuBtn:hover {
+    background-color: black;
+    color: aliceblue;
+    border-color: aliceblue;
+    cursor: pointer;
+}
+#resumeBtn{
+    font-size: 2rem;
+    background-color: aliceblue;
+    border: 5px solid black;
+    border-radius: 12px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    animation-name: bounceIn;
+    animation-duration: 3s;
+}
+#resumeBtn:hover{
     background-color: black;
     color: aliceblue;
     border-color: aliceblue;
