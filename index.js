@@ -19,7 +19,8 @@ ctx.fillRect(0, 0, 1024, 576); //4arguments x, y, width, height fills a rectangl
 
 const gravity = 0.7; // downward acceleration to objects
 
-const resultTextElement = document.querySelector('#displayResult');
+const endScreen = document.querySelector('#endGameScreen');
+const resultTextElement = document.querySelector('#result');
 
 /////////////
 //BackGround
@@ -318,7 +319,7 @@ function borderCollision(player) {
 // determines winner
 function determineWinner({ player, enemy, timerId }) {
   clearTimeout(timerId);
-  resultTextElement.style.display = 'flex';
+  endScreen.style.display = 'flex';
   if (player.health === enemy.health) {
     resultTextElement.innerText = 'Tie';
   } else if (player.health > enemy.health) {

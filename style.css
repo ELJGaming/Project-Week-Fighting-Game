@@ -29,8 +29,11 @@
     right:0; 
     bottom: 0;
 }
-#displayResult{
-    position: absolute; 
+/* #result{
+
+} */
+/* #displayResult{ */
+    /* position: absolute; 
     color: white; 
     border-color:1px solid black;
     display: none; 
@@ -40,12 +43,12 @@
     left: 0; 
     bottom: 0; 
     right: 0;
-}
+} */
 #endGameScreen {
+    display: none;
     font-size: 50px;
     position: absolute;
     /* here you would want to change this property in js to display flex */
-    display: none;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -72,10 +75,10 @@
     color: aliceblue;
 }
 
-#container {
+#container{
     animation-name: bounceIn;
-    animation-duration: 3s;
-    animation-delay: 1s;
+    animation-duration: 1s;
+    animation-delay: 0s;
 }
 
 #restartBtn {
@@ -137,7 +140,7 @@
     font-size: 50px;
     position: absolute;
     /* here you would want to change this property in js to display flex */
-    display: none;
+    display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;

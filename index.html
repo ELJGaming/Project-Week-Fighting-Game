@@ -26,14 +26,14 @@
             <button id = 'pauseBtn'><i class="fa-solid fa-pause"></i></button>
         </div>
 
-        <div id="displayResult">
-            Tie</div>
+        <!-- <div id="displayResult">
+            Tie</div> -->
         <canvas></canvas>
 
         <!-- Add the feature displayResult below so this div would pop up saying End Game and option to restart -->
-        <div id="endGameScreen">
-            <div id='container'>
-                <p>Player 1 Winner!!!</p>
+        <div id="endGameScreen" style="display: none;">
+            <div id='container' style="animation-delay: 0s;">
+                <p id = 'result'></p>
                 <button id='restartBtn'>Restart</button>
                 <button id='menuBtn'>Menu</button>
             </div>
