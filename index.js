@@ -295,6 +295,9 @@ const keys = {
 };
 
 function rectanglarCollision({ rectangle1, rectangle2 }) {
+/////////////////// 
+////HitBox
+/////////////////// 
   return (
     rectangle1.attackBox.position.x + rectangle1.attackBox.width >=
     rectangle2.position.x &&

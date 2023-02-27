@@ -2,10 +2,209 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <style>
         * {
             box-sizing: border-box;
             font-family: 'Press Start 2P', cursive;
+        }
+
+        #endGameScreen {
+            font-family: 'Press Start 2P', cursive;
+            font-size: 50px;
+            position: absolute;
+            /* here you would want to change this property in js to display flex */
+            display: none;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(128, 128, 128, 0.7);
+            color: aliceblue;
+        }
+        #pauseScreen{
+            font-family: 'Press Start 2P', cursive;
+            font-size: 50px;
+            position: absolute;
+            /* here you would want to change this property in js to display flex */
+            display: none;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(128, 128, 128, 0.7);
+            color: aliceblue;
+        }
+
+        #container {
+            animation-name: bounceIn;
+            animation-duration: 3s;
+            animation-delay: 1s;
+        }
+
+        #restartBtn {
+            font-family: 'Press Start 2P', cursive;
+            font-size: 2rem;
+            background-color: aliceblue;
+            border: 5px solid black;
+            border-radius: 12px;
+        }
+
+        #restartBtn:hover {
+            background-color: black;
+            color: aliceblue;
+            border-color: aliceblue;
+            cursor: pointer;
+        }
+
+        #menuBtn {
+            font-family: 'Press Start 2P', cursive;
+            font-size: 2rem;
+            background-color: aliceblue;
+            border: 5px solid black;
+            border-radius: 12px;
+        }
+
+        #menuBtn:hover {
+            background-color: black;
+            color: aliceblue;
+            border-color: aliceblue;
+            cursor: pointer;
+        }
+        #controlBtns{
+            font-family: 'Press Start 2P', cursive;
+            font-size: 2rem;
+            background-color: aliceblue;
+            border: 5px solid black;
+            border-radius: 12px;
+        }
+        #controlBtns:hover{
+            background-color: black;
+            color: aliceblue;
+            border-color: aliceblue;
+            cursor: pointer;
+        }
+        #pauseBtn{
+            position: absolute;
+            top:5;
+            left:820;
+            font-family: 'Press Start 2P', cursive;
+            font-size: 2rem;
+            background-color: aliceblue;
+            border: 5px solid black;
+            border-radius: 12px;
+        }
+        #pauseBtn:hover{
+            cursor: pointer;
+            background-color: black;
+            color: aliceblue;
+            border-color: aliceblue;
+        }
+
+        #endGameScreen {
+            font-family: 'Press Start 2P', cursive;
+            font-size: 50px;
+            position: absolute;
+            /* here you would want to change this property in js to display flex */
+            display: none;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(128, 128, 128, 0.7);
+            color: aliceblue;
+        }
+        #pauseScreen{
+            font-family: 'Press Start 2P', cursive;
+            font-size: 50px;
+            position: absolute;
+            /* here you would want to change this property in js to display flex */
+            display: none;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(128, 128, 128, 0.7);
+            color: aliceblue;
+        }
+
+        #container {
+            animation-name: bounceIn;
+            animation-duration: 3s;
+            animation-delay: 1s;
+        }
+
+        #restartBtn {
+            font-family: 'Press Start 2P', cursive;
+            font-size: 2rem;
+            background-color: aliceblue;
+            border: 5px solid black;
+            border-radius: 12px;
+        }
+
+        #restartBtn:hover {
+            background-color: black;
+            color: aliceblue;
+            border-color: aliceblue;
+            cursor: pointer;
+        }
+
+        #menuBtn {
+            font-family: 'Press Start 2P', cursive;
+            font-size: 2rem;
+            background-color: aliceblue;
+            border: 5px solid black;
+            border-radius: 12px;
+        }
+
+        #menuBtn:hover {
+            background-color: black;
+            color: aliceblue;
+            border-color: aliceblue;
+            cursor: pointer;
+        }
+        #controlBtns{
+            font-family: 'Press Start 2P', cursive;
+            font-size: 2rem;
+            background-color: aliceblue;
+            border: 5px solid black;
+            border-radius: 12px;
+        }
+        #controlBtns:hover{
+            background-color: black;
+            color: aliceblue;
+            border-color: aliceblue;
+            cursor: pointer;
+        }
+        #pauseBtn{
+            position: absolute;
+            top:5;
+            left:820;
+            font-family: 'Press Start 2P', cursive;
+            font-size: 2rem;
+            background-color: aliceblue;
+            border: 5px solid black;
+            border-radius: 12px;
+        }
+        #pauseBtn:hover{
+            cursor: pointer;
+            background-color: black;
+            color: aliceblue;
+            border-color: aliceblue;
         }
         /* canvas {
             background-image: url('fighting-background-1.gif');
@@ -31,9 +230,30 @@
                 <div style="background-color: red; height: 30px;"></div>
                 <div id="enemyHealth" style="position:absolute; background-color: blue; top: 0; left: 0; right:0; bottom: 0;"></div>
             </div>
+            <button id = 'pauseBtn'>Pause</button>
         </div>
-        <div id="displayResult" style="position: absolute; color: white; display: none; align-items: center; justify-content: center; top: 0; left: 0; bottom: 0; right: 0;">Tie</div>
+
+        <div id="displayResult"
+            style="position: absolute; color: white; border-color:1px solid black;display: none; align-items: center; justify-content: center; top: 0; left: 0; bottom: 0; right: 0;">
+            Tie</div>
         <canvas></canvas>
+
+        <!-- Add the feature displayResult below so this div would pop up saying End Game and option to restart -->
+        <div id="endGameScreen">
+            <div id='container'>
+                <p>Player 1 Winner!!!</p>
+                <button id='restartBtn'>Restart</button>
+                <button id='menuBtn'>Menu</button>
+            </div>
+        </div>
+        <div id="pauseScreen">
+            <div id='container'>
+                <p>Pause</p>
+                <button id='controlBtns'>Controls</button>
+                <button id='restartBtn'>Restart</button>
+                <button id='menuBtn'>Menu</button>
+            </div>
+        </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js" integrity="sha512-f8mwTB+Bs8a5c46DEm7HQLcJuHMBaH/UFlcgyetMqqkvTcYg4g5VXsYR71b3qC82lZytjNYvBj2pf0VekA9/FQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="classes.js"></script>
