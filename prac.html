@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Select Player and Map</title>
+</head>
+<body>
+	<h1>Select Player and Map</h1>
+
+	<form>
+		<label for="players">Select Player:</label>
+		<select id="players" name="players">
+			<option value="player1">Player 1</option>
+			<option value="player2">Player 2</option>
+			<option value="player3">Player 3</option>
+		</select>
+
+		<br><br>
+
+		<label for="maps">Select Map:</label>
+		<select id="maps" name="maps">
+			<option value="map1">Map 1</option>
+			<option value="map2">Map 2</option>
+			<option value="map3">Map 3</option>
+		</select>
+	</form>
+
+	<br><br>
+
+	<img id="map-gif" src="map1.gif" alt="Map 1">
+
+	<script>
+		// Get form and image elements
+		const form = document.querySelector('form');
+		const mapGif = document.getElementById('map-gif');
+
+		// Listen for changes in player and map selection
+		form.addEventListener('change', () => {
+			// Get selected player and map values
+			const player = form.players.value;
+			const map = form.maps.value;
+
+			// Update the image source to display the selected map
+			mapGif.src = `${map}.gif`;
+
+			// Log the selected player and map values
+			console.log(`Selected Player: ${player}`);
+			console.log(`Selected Map: ${map}`);
+		});
+	</script>
+</body>
+</html>

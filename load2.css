@@ -1,0 +1,66 @@
+#canvas{
+    border: 1px solid black;
+    background-image: url('load2.jpg'); 
+  }
+
+#loading {
+    position: absolute;
+    top: 90px;
+    left: 650px;
+    font-family: 'Press Start 2P', cursive;
+    color:white;
+    font-size: 28px;
+    text-align: center;
+}
+  
+  #loading span {
+    opacity: 0;
+    animation: fadeIn 3s ease-in-out infinite;
+    display: inline-block;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-50%);
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(50%);
+    }
+  }
+
+  #tips {
+    position: absolute;
+  top: 470px;
+  left: 9%;
+  font-size: 20px;
+  font-family: 'Press Start 2P', cursive;
+  text-transform:capitalize;
+  color: white;
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+  opacity: 0;
+    animation-name: fadeIn;
+  animation-duration: 3s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+  }
+  #tips1 {
+    position: absolute;
+  top: 470px;
+  left: 9%;
+  font-size: 20px;
+  font-family: 'Press Start 2P', cursive;
+  text-transform:capitalize;
+  color: white;
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+  opacity: 0;
+    animation-name: fadeIn;
+  animation-duration: 3s;
+  animation-delay: 4s;
+  animation-fill-mode: forwards;
+  }
