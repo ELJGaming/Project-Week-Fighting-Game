@@ -1,21 +1,13 @@
-
-#canvas {
-    height: 576px;
-    width: 1024px;
+canvas {
     border: 1px solid black;
-    background-image: url('howtoplay.jpg'); 
-}
+    background-image: url('../gif/map1.gif'); 
+    background-repeat: no-repeat;
+  }
 
-#main {
-    position:absolute;
-    top: 50px;
-    left: 20px;
-}
-
-#button1{
+  #button1{
     position: absolute;
     top: 8.75px;
-    left: 10px;
+    right: 567px;
     padding: 5px;
     background-color: transparent;
         color: #ffffff;
@@ -30,25 +22,6 @@
         box-shadow: 0 4px #999;
         font-family: 'Press Start 2P', cursive;
         cursor: pointer; /* Mouse pointer on hover */
-  }
-
-  p {
-    font-family: 'Press Start 2P', cursive;
-    font-size: 15px;
-    font-family: 'Press Start 2P', cursive;
-    
-  }
-
-  li {
-    font-family: 'Press Start 2P', cursive;
-    font-size: 16px;
-    padding: 13px;
-    font-weight: bold;
-    color: aliceblue;
-  }
-
-  ul {
-    font-size:15px
   }
   
   

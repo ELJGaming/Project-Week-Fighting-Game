@@ -40,7 +40,7 @@ const background = new Sprite({
     x: 0,
     y: 0
   },
-  imageSrc: './img/backgrounds/fighting-background-1.gif'
+  imageSrc: '../img/backgrounds/fighting-background-1.gif'
 });
 
 const shop = new Sprite({
@@ -48,7 +48,7 @@ const shop = new Sprite({
     x: 625,
     y: 128
   },
-  imageSrc: './img/backgrounds/shop.png',
+  imageSrc: '../img/backgrounds/shop.png',
   scale: 0,
   framesMax: 6
 });
@@ -78,36 +78,36 @@ const player = new Fighter({
     x: 215,
     y: 141,
   },
-  imageSrc: './img/Huntress/Idle.png',
+  imageSrc: '../img/Huntress/Idle.png',
   framesMax: 8,
   scale: 3,
   sprites: {
     idle: {
-      imageSrc: './img/Huntress/Idle.png',
+      imageSrc: '../img/Huntress/Idle.png',
       framesMax: 8
     },
     run: {
-      imageSrc: './img/Huntress/Run.png',
+      imageSrc: '../img/Huntress/Run.png',
       framesMax: 8
     },
     jump: {
-      imageSrc: './img/Huntress/Jump.png',
+      imageSrc: '../img/Huntress/Jump.png',
       framesMax: 2
     },
     fall: {
-      imageSrc: './img/Huntress/Fall.png',
+      imageSrc: '../img/Huntress/Fall.png',
       framesMax: 2
     },
     attack1: {
-      imageSrc: './img/Huntress/Attack1.png',
+      imageSrc: '../img/Huntress/Attack1.png',
       framesMax: 5
     },
     takeHit: {
-      imageSrc: './img/Huntress/Take hit.png',
+      imageSrc: '../img/Huntress/Take hit.png',
       framesMax: 3
     },
     death: {
-      imageSrc: './img/Huntress/Death.png',
+      imageSrc: '../img/Huntress/Death.png',
       framesMax: 8
     }
   },
@@ -255,36 +255,36 @@ const enemy = new Fighter({
     x: 215,
     y: 172,
   },
-  imageSrc: './img/kenji/Idle.png',
+  imageSrc: '../img/kenji/Idle.png',
   framesMax: 4,
   scale: 2.5,
   sprites: {
     idle: {
-      imageSrc: './img/kenji/Idle.png',
+      imageSrc: '../img/kenji/Idle.png',
       framesMax: 4
     },
     run: {
-      imageSrc: './img/kenji/Run.png',
+      imageSrc: '../img/kenji/Run.png',
       framesMax: 8
     },
     jump: {
-      imageSrc: './img/kenji/Jump.png',
+      imageSrc: '../img/kenji/Jump.png',
       framesMax: 2
     },
     fall: {
-      imageSrc: './img/kenji/Fall.png',
+      imageSrc: '../img/kenji/Fall.png',
       framesMax: 2
     },
     attack1: {
-      imageSrc: './img/kenji/Attack1.png',
+      imageSrc: '../img/kenji/Attack1.png',
       framesMax: 4
     },
     takeHit: {
-      imageSrc: './img/kenji/Take hit.png',
+      imageSrc: '../img/kenji/Take hit.png',
       framesMax: 3
     },
     death: {
-      imageSrc: './img/kenji/Death.png',
+      imageSrc: '../img/kenji/Death.png',
       framesMax: 7
     }
   },

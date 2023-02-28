@@ -1,6 +1,6 @@
 canvas {
   border: 1px solid black;
-  background-image: url(index.gif);
+  background-image: url('../gif/index.gif');
   background-repeat: no-repeat;
 }
 

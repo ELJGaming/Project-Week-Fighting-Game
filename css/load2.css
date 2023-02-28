@@ -1,6 +1,6 @@
 #canvas{
     border: 1px solid black;
-    background-image: url('load2.jpg'); 
+    background-image: url('../img/backgrounds/load2.jpg'); 
   }
 
 #loading {
