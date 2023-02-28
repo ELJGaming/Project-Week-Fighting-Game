@@ -334,6 +334,19 @@ function borderCollision(player) {
   )
 }
 
+//Start fight
+// let count = 3
+// function startFight(){
+//   setTimeout(() => {
+//     //display count
+//     console.log(count)
+//     --count
+//     if(count === 0){
+//       //display 'FIGHT'
+//     }
+//   } )
+// }
+
 //PAUSE button
 function pressedPause(){
   screenPause.style.display = 'flex';
