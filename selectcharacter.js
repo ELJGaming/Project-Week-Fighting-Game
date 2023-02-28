@@ -1,6 +1,6 @@
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
-//const characterMusic = document.getElementById('selectcharacterMusic').play()
+const characterMusic = document.getElementById('selectcharacterMusic').play()
 const characters = document.querySelectorAll('.character');
       let selectedCharacter = null;
 
