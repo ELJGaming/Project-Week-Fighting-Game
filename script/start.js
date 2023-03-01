@@ -27,10 +27,36 @@ const endScreen = document.querySelector('#endGameScreen');
 const resultTextElement = document.querySelector('#result');
 const screenPause = document.querySelector('#pauseScreen');
 const controlScreen = document.querySelector('#controlScreen');
+const player1Audio =  document.getElementById('player1-audio')
+const player2Audio = document.getElementById('player2-audio')
+/*startGameScreen*/
+const countdown = document.getElementById("countdown");
+const fightMessage = document.getElementById("fight-message");
+const fightAudio = document.getElementById("fight-audio").play();
+const songAudio = document.getElementById("song-audio")
+setInterval(() => {
+  songAudio.play()
+}, 4000)
+// const startGame 
 
 // function hrefMenu(){
 //   windows.location.href = 'start.html';
 // }
+
+/////////////
+//IDEA FOR HIT SOUND
+////////////
+// Create an Audio object and set the source to your sound file
+// const hitSound = new Audio('hit.wav');
+
+// // Add an event listener to your sprite to detect when it's hit
+// sprite.addEventListener('click', () => {
+//   // Play the sound when the sprite is hit
+//   hitSound.play();
+// });
+/////////////
+//IDEA FOR HIT SOUND
+////////////
 
 /////////////
 //BackGround
@@ -346,6 +372,61 @@ function borderCollision(player) {
 //     }
 //   } )
 // }
+//start fight updated
+// function startCountdown() {
+//   let count = 3;
+//   countdown.innerText = count;
+
+//   const countdownInterval = setInterval(() => {
+//     --count;
+//     countdown.innerText = count;
+
+//     if (count === 0) {
+//       clearInterval(countdownInterval);
+//       countdown.style.display = "none";
+//       fightMessage.style.display = "block";
+//       fightAudio.play();
+//       setTimeout(() => {
+//         fightMessage.style.display = count;
+//       }, 1000);
+//     } else {
+//       tickAudio.play();
+//     }
+//   }, 1000);
+// }
+// startCountdown();
+
+//START GAME UPDATED UPDATED
+function startCountdown() {
+  let count = 3;
+  countdown.innerText = count;
+
+
+  const countdownInterval = setInterval(() => {
+    --count;
+    countdown.style.color =  Math.floor(Math.random()*16777215).toString(16);//generates random color
+    countdown.innerText = count;
+    if (count === 0){
+      countdown.innerText = 'Fight'
+    }
+     if (count === -1) {
+      //fightMessage.innerText = 'Fight'
+      clearInterval(countdownInterval);
+      countdown.style.display = "none";
+      // fightMessage.style.display = "none"
+//       fightAudio.play();
+     }
+   }, 1000);
+  //  const fight = setTimeout(() =>{
+  //   if (count === 0){
+  //     fightMessage.style.display = "fight"
+  //     clearInterval(fightMessage);
+  //   }
+  //  },3000)
+ }
+
+window.addEventListener("load", startCountdown);
+
 
 //PAUSE button
 function pressedPause(){
@@ -369,10 +450,15 @@ function determineWinner({ player, enemy, timerId }) {
   endScreen.style.display = 'flex';
   if (player.health === enemy.health) {
     resultTextElement.innerText = 'TIE';
+    fightAudio.pause()
   } else if (player.health > enemy.health) {
     resultTextElement.innerText = 'PLAYER 1 WINS';
+    player1Audio.play()
+    fightAudio.pause()
   } else if (player.health < enemy.health) {
     resultTextElement.innerText = 'PLAYER 2 WINS';
+    player2Audio.play()
+    fightAudio.pause()
   }
 }
 
@@ -483,7 +569,7 @@ animatieSprites();
 //Move Sprite usimg event listeners
 /////////////////
 
-window.addEventListener("keydown", (event) => {
+let jah = window.addEventListener("keydown", (event) => {
   ////player
   if (!player.dead) {
     switch (event.key) {

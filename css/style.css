@@ -3,6 +3,9 @@
     font-family: 'Press Start 2P', cursive;
 }
 
+
+  
+
 #identityPlayer2{
     position: absolute;
     color: white;
@@ -16,6 +19,7 @@
 
 #timer {
     background-color: black;
+    border-radius: 25%;
     color: white;
     height: 50px;
     width: 100px;
@@ -33,6 +37,7 @@
     right: 0;
     bottom: 0;
     width: 100%;
+    
 }
 
 #enemyHealth {
@@ -43,6 +48,19 @@
     right: 0;
     bottom: 0;
 }
+/*startGameScreen*/
+#countdown-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 6rem;
+    color: white;
+  }
+  
+    
+  /*startGameScreen*/
 
 #endGameScreen {
     display: none;
