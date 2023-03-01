@@ -76,110 +76,50 @@ const player = new Fighter({
   },
   offset: {
     x: 215,
-    y: 141,
+    y: 55,
   },
-  imageSrc: '../img/Huntress/Idle.png',
-  framesMax: 8,
-  scale: 3,
+  imageSrc: '../img/Martial Hero 3/Idle.png',
+  framesMax: 10,
+  scale: 2.5,
   sprites: {
     idle: {
-      imageSrc: '../img/Huntress/Idle.png',
-      framesMax: 8
+      imageSrc: '../img/Martial Hero 3/Idle.png',
+      framesMax: 10
     },
     run: {
-      imageSrc: '../img/Huntress/Run.png',
+      imageSrc: '../img/Martial Hero 3/Run.png',
       framesMax: 8
     },
     jump: {
-      imageSrc: '../img/Huntress/Jump.png',
-      framesMax: 2
+      imageSrc: '../img/Martial Hero 3/Going Up.png',
+      framesMax: 3
     },
     fall: {
-      imageSrc: '../img/Huntress/Fall.png',
-      framesMax: 2
+      imageSrc: '../img/Martial Hero 3/Going Down.png',
+      framesMax: 3
     },
     attack1: {
-      imageSrc: '../img/Huntress/Attack1.png',
-      framesMax: 5
+      imageSrc: '../img/Martial Hero 3/Attack1.png',
+      framesMax: 7
     },
     takeHit: {
-      imageSrc: '../img/Huntress/Take hit.png',
+      imageSrc: '../img/Martial Hero 3/Take Hit.png',
       framesMax: 3
     },
     death: {
-      imageSrc: '../img/Huntress/Death.png',
-      framesMax: 8
+      imageSrc: '../img/Martial Hero 3/Death.png',
+      framesMax: 11
     }
   },
   attackBox: {
     offset: {
-      x: 8,
+      x: -30,
       y: 50
     },
-    width: 160,
+    width: 130,
     height: 50
   }
 });
-
-/////////////
-//ENEMY
-////////////
-
-// const enemy = new Fighter({
-//   position: {
-//     x: canvasElement.width * 0.8,
-//     y: 15,
-//   },
-//   velocity: {
-//     x: 0,
-//     y: 0,
-//   },
-//   offset: {
-//     x: 215,
-//     y: 105,
-//   },
-//   imageSrc: './img/Fantasy Warrior/Idle.png',
-//   framesMax: 10,
-//   scale: 2.5,
-//   sprites: {
-//     idle: {
-//       imageSrc: './img/Fantasy Warrior/Idle.png',
-//       framesMax: 10
-//     },
-//     run: {
-//       imageSrc: './img/Fantasy Warrior/Run.png',
-//       framesMax: 8
-//     },
-//     jump: {
-//       imageSrc: './img/Fantasy Warrior/Jump.png',
-//       framesMax: 3
-//     },
-//     fall: {
-//       imageSrc: './img/Fantasy Warrior/Fall.png',
-//       framesMax: 3
-//     },
-//     attack1: {
-//       imageSrc: './img/Fantasy Warrior/Attack1.png',
-//       framesMax: 7
-//     },
-//     takeHit: {
-//       imageSrc: './img/Fantasy Warrior/Take hit.png',
-//       framesMax: 3
-//     },
-//     death: {
-//       imageSrc: './img/Fantasy Warrior/Death.png',
-//       framesMax: 7
-//     }
-//   },
-//   attackBox: {
-//     offset: {
-//       x: 100,
-//       y: 50
-//     },
-//     width: 160,
-//     height: 50
-//   }
-// });
 
 /////////////
 //Player
