@@ -173,6 +173,8 @@ class Fighter extends Sprite {
                     this.framesMax = this.sprites.death.framesMax;
                     this.framesCurrent = 0;
                 }
+                // leave this when merge
+                document.querySelector('#deathAudio').play();
                 break; 
         }
     }
