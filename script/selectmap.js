@@ -1,18 +1,19 @@
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
-//const selectMap = document.getElementById("selectMap").play();
+// const canvas = document.getElementById('canvas');
+// const ctx = canvas.getContext('2d');
+const selectMap = document.getElementById("selectMap").play();
+const mapsElements = document.querySelectorAll('.mas');
 //begin playback of the media file
-      // let selectedCharacter = null;
 
-      // characters.forEach((character) => {
-      //   character.addEventListener('click', () => {
-      //     if (selectedCharacter) {
-      //       selectedCharacter.classList.remove('selected');
-      //     }
-      //     selectedCharacter = character;
-      //     selectedCharacter.classList.add('selected');
-      //   });
-      // });
+const obj = {
+      map1: maps.map1,
+      map2: maps.map2,
+      map3: maps.map3
+};
 
-     
-
+mapsElements.forEach((mapElement) => {
+      mapElement.addEventListener('click', () => {
+            const map = mapElement.id;
+            localStorage.setItem('map', JSON.stringify(obj[map]));
+            window.location.href = "../html/start.html";
+      });
+});
