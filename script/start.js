@@ -1,3 +1,19 @@
+//Save the sprite value to local storage:
+//localStorage.setItem('sprite', 'spriteValue');
+
+//Replace 'spriteValue' with the actual value of the sprite that you want to store.
+//Retrieve the sprite value from local storage on the separate HTML document:
+//let spriteValue = localStorage.getItem('sprite');
+
+//Set the sprite value as the source of the image on the separate HTML document:
+//let img = document.getElementById('imageId');//
+//img.src = spriteValue;
+
+
+
+
+
+
 ////////////////
 ///Screen
 ///////////////
@@ -27,7 +43,7 @@ const endScreen = document.querySelector('#endGameScreen');
 const resultTextElement = document.querySelector('#result');
 const screenPause = document.querySelector('#pauseScreen');
 const controlScreen = document.querySelector('#controlScreen');
-const player1Audio =  document.getElementById('player1-audio')
+const player1Audio = document.getElementById('player1-audio')
 const player2Audio = document.getElementById('player2-audio')
 /*startGameScreen*/
 const countdown = document.getElementById("countdown");
@@ -37,6 +53,7 @@ const songAudio = document.getElementById("song-audio")
 setInterval(() => {
   songAudio.play()
 }, 4000)
+let hitSounds = ['../']
 // const startGame 
 
 // function hrefMenu(){
@@ -126,6 +143,10 @@ const player = new Fighter({
     },
     attack1: {
       imageSrc: '../img/Huntress/Attack1.png',
+      framesMax: 5
+    },
+    attack2: {
+      imageSrc: '../img/Huntress/Attack2.png ',
       framesMax: 5
     },
     takeHit: {
@@ -305,6 +326,10 @@ const enemy = new Fighter({
       imageSrc: '../img/kenji/Attack1.png',
       framesMax: 4
     },
+    attack2: {
+      imageSrc: '../img/kenji/Attack2.png',
+      framesMax: 4
+    },
     takeHit: {
       imageSrc: '../img/kenji/Take hit.png',
       framesMax: 3
@@ -404,42 +429,42 @@ function startCountdown() {
 
   const countdownInterval = setInterval(() => {
     --count;
-    countdown.style.color =  Math.floor(Math.random()*16777215).toString(16);//generates random color
+    countdown.style.color = Math.floor(Math.random() * 16777215).toString(16);//generates random color
     countdown.innerText = count;
-    if (count === 0){
+    if (count === 0) {
       countdown.innerText = 'Fight'
     }
-     if (count === -1) {
+    if (count === -1) {
       //fightMessage.innerText = 'Fight'
       clearInterval(countdownInterval);
       countdown.style.display = "none";
       // fightMessage.style.display = "none"
-//       fightAudio.play();
-     }
-   }, 1000);
+      //       fightAudio.play();
+    }
+  }, 1000);
   //  const fight = setTimeout(() =>{
   //   if (count === 0){
   //     fightMessage.style.display = "fight"
   //     clearInterval(fightMessage);
   //   }
   //  },3000)
- }
+}
 
 window.addEventListener("load", startCountdown);
 
 
 //PAUSE button
-function pressedPause(){
+function pressedPause() {
   screenPause.style.display = 'flex';
   clearTimeout(timerId);
 }
 //Resume
-function pressedResume(){
+function pressedResume() {
   decrementTimer();
   screenPause.style.display = 'none';
   controlScreen.style.display = 'none';
 }
-function howToPlayFunction(){
+function howToPlayFunction() {
   screenPause.style.display = 'none';
   controlScreen.style.display = 'flex';
 }
@@ -493,7 +518,7 @@ function animatieSprites() {
   player.velocity.x = 0; // default value player isnt moving
   enemy.velocity.x = 0; // default value enemy isnt moving
 
-  if (!borderCollision(player)) {}
+  if (!borderCollision(player)) { }
 
   //Player Movement
   if (keys.a.pressed && player.lastKey === "a") {
@@ -570,6 +595,7 @@ animatieSprites();
 /////////////////
 
 let jah = window.addEventListener("keydown", (event) => {
+  // debugger
   ////player
   if (!player.dead) {
     switch (event.key) {
@@ -587,6 +613,12 @@ let jah = window.addEventListener("keydown", (event) => {
       case " ":
         player.attack();
         break; // if space is equal to a player attack
+      case "c":
+        player.attack2();
+        break; // if key is equal to a player attack
+      case "v":
+        player.attack3();
+        break; // if key is equal to a player attack
     }
   }
   ////enemy
@@ -606,6 +638,12 @@ let jah = window.addEventListener("keydown", (event) => {
       case "ArrowDown":
         enemy.attack();
         break; // if key is equal to a player attack function gets fired
+      case "m":
+        enemy.attack2();
+        break; // if key is equal to a player attack
+      // case "n":
+      //   enemy.attack3();
+      //   break; // if key is equal to a player attack
     }
   }
 });
