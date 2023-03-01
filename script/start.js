@@ -35,95 +35,32 @@ const controlScreen = document.querySelector('#controlScreen');
 /////////////
 //BackGround
 ////////////
-const background = new Sprite({
-  position: {
-    x: 0,
-    y: 0
-  },
-  imageSrc: '../img/backgrounds/fighting-background-1.gif'
-});
-
-const shop = new Sprite({
-  position: {
-    x: 625,
-    y: 128
-  },
-  imageSrc: '../img/backgrounds/shop.png',
-  scale: 0,
-  framesMax: 6
-});
-
 // const background = new Sprite({
 //   position: {
 //     x: 0,
 //     y: 0
 //   },
-//   imageSrc: './img/backgrounds/fighting-background-1.gif'
+//   imageSrc: '../img/backgrounds/fighting-background-1.gif'
 // });
 
-/////////////
-//Player
-////////////
+// const shop = new Sprite({
+//   position: {
+//     x: 625,
+//     y: 128
+//   },
+//   imageSrc: '../img/backgrounds/shop.png',
+//   scale: 0,
+//   framesMax: 6
+// });
 
-const player = new Fighter({
-  position: {
-    x: canvasElement.width * 0.4,
-    y: 15,
-  },
-  velocity: {
-    x: 0,
-    y: 0,
-  },
-  offset: {
-    x: 215,
-    y: 55,
-  },
-  imageSrc: '../img/Martial Hero 3/Idle.png',
-  framesMax: 10,
-  scale: 2.5,
-  sprites: {
-    idle: {
-      imageSrc: '../img/Martial Hero 3/Idle.png',
-      framesMax: 10
-    },
-    run: {
-      imageSrc: '../img/Martial Hero 3/Run.png',
-      framesMax: 8
-    },
-    jump: {
-      imageSrc: '../img/Martial Hero 3/Going Up.png',
-      framesMax: 3
-    },
-    fall: {
-      imageSrc: '../img/Martial Hero 3/Going Down.png',
-      framesMax: 3
-    },
-    attack1: {
-      imageSrc: '../img/Martial Hero 3/Attack1.png',
-      framesMax: 7
-    },
-    takeHit: {
-      imageSrc: '../img/Martial Hero 3/Take Hit.png',
-      framesMax: 3
-    },
-    death: {
-      imageSrc: '../img/Martial Hero 3/Death.png',
-      framesMax: 11
-    }
-  },
-  attackBox: {
-    offset: {
-      x: -30,
-      y: 50
-    },
-    width: 130,
-    height: 50
-  }
-});
+const background = new Sprite(JSON.parse(localStorage.getItem('map')));
+console.log(background)
 
 /////////////
 //Player
 ////////////
+const player  = new Fighter(JSON.parse(localStorage.getItem('player1')));
+const enemy  = new Fighter(JSON.parse(localStorage.getItem('player2')));
 // const player = new Fighter({
 //   position: {
 //     x: canvasElement.width * 0.4,
@@ -135,108 +72,110 @@ const player = new Fighter({
 //   },
 //   offset: {
 //     x: 215,
-//     y: 157,
+//     y: 55,
 //   },
-//   imageSrc: './img/samauriMack/Idle.png',
-//   framesMax: 8,
+//   imageSrc: '../img/Martial Hero 3/Idle.png',
+//   framesMax: 10,
 //   scale: 2.5,
 //   sprites: {
 //     idle: {
-//       imageSrc: './img/samauriMack/Idle.png',
-//       framesMax: 8
+//       imageSrc: '../img/Martial Hero 3/Idle.png',
+//       framesMax: 10
 //     },
 //     run: {
-//       imageSrc: './img/samauriMack/Run.png',
+//       imageSrc: '../img/Martial Hero 3/Run.png',
 //       framesMax: 8
 //     },
 //     jump: {
-//       imageSrc: './img/samauriMack/Jump.png',
-//       framesMax: 2
+//       imageSrc: '../img/Martial Hero 3/Going Up.png',
+//       framesMax: 3
 //     },
 //     fall: {
-//       imageSrc: './img/samauriMack/Fall.png',
-//       framesMax: 2
+//       imageSrc: '../img/Martial Hero 3/Going Down.png',
+//       framesMax: 3
 //     },
 //     attack1: {
-//       imageSrc: './img/samauriMack/Attack1.png',
-//       framesMax: 6
+//       imageSrc: '../img/Martial Hero 3/Attack1.png',
+//       framesMax: 7
 //     },
 //     takeHit: {
-//       imageSrc: './img/samauriMack/Take Hit - white silhouette.png',
-//       framesMax: 4
+//       imageSrc: '../img/Martial Hero 3/Take Hit.png',
+//       framesMax: 3
 //     },
 //     death: {
-//       imageSrc: './img/samauriMack/Death.png',
-//       framesMax: 6
+//       imageSrc: '../img/Martial Hero 3/Death.png',
+//       framesMax: 11
 //     }
 //   },
 //   attackBox: {
 //     offset: {
-//       x: 100,
+//       x: -30,
+//       y: 50
+//     },
+//     width: 130,
+//     height: 50
+//   }
+// });
+
+/////////////
+//Enemy
+////////////
+
+// const enemy = new Fighter({
+//   position: {
+//     x: canvasElement.width * 0.8,
+//     y: 15,
+//   },
+//   velocity: {
+//     x: 0,
+//     y: 0,
+//   },
+//   offset: {
+//     x: 215,
+//     y: 172,
+//   },
+//   imageSrc: '../img/kenji/Idle.png',
+//   framesMax: 4,
+//   scale: 2.5,
+//   sprites: {
+//     idle: {
+//       imageSrc: '../img/kenji/Idle.png',
+//       framesMax: 4
+//     },
+//     run: {
+//       imageSrc: '../img/kenji/Run.png',
+//       framesMax: 8
+//     },
+//     jump: {
+//       imageSrc: '../img/kenji/Jump.png',
+//       framesMax: 2
+//     },
+//     fall: {
+//       imageSrc: '../img/kenji/Fall.png',
+//       framesMax: 2
+//     },
+//     attack1: {
+//       imageSrc: '../img/kenji/Attack1.png',
+//       framesMax: 4
+//     },
+//     takeHit: {
+//       imageSrc: '../img/kenji/Take hit.png',
+//       framesMax: 3
+//     },
+//     death: {
+//       imageSrc: '../img/kenji/Death.png',
+//       framesMax: 7
+//     }
+//   },
+//   attackBox: {
+//     offset: {
+//       x: -190,
 //       y: 50
 //     },
 //     width: 160,
 //     height: 50
 //   }
 // });
-/////////////
-//Enemy
-////////////
-const enemy = new Fighter({
-  position: {
-    x: canvasElement.width * 0.8,
-    y: 15,
-  },
-  velocity: {
-    x: 0,
-    y: 0,
-  },
-  offset: {
-    x: 215,
-    y: 172,
-  },
-  imageSrc: '../img/kenji/Idle.png',
-  framesMax: 4,
-  scale: 2.5,
-  sprites: {
-    idle: {
-      imageSrc: '../img/kenji/Idle.png',
-      framesMax: 4
-    },
-    run: {
-      imageSrc: '../img/kenji/Run.png',
-      framesMax: 8
-    },
-    jump: {
-      imageSrc: '../img/kenji/Jump.png',
-      framesMax: 2
-    },
-    fall: {
-      imageSrc: '../img/kenji/Fall.png',
-      framesMax: 2
-    },
-    attack1: {
-      imageSrc: '../img/kenji/Attack1.png',
-      framesMax: 4
-    },
-    takeHit: {
-      imageSrc: '../img/kenji/Take hit.png',
-      framesMax: 3
-    },
-    death: {
-      imageSrc: '../img/kenji/Death.png',
-      framesMax: 7
-    }
-  },
-  attackBox: {
-    offset: {
-      x: -190,
-      y: 50
-    },
-    width: 160,
-    height: 50
-  }
-});
 
 const keys = {
   a: {
@@ -324,7 +263,7 @@ function animatieSprites() {
   ctx.fillStyle = "black"; // black canvas
   ctx.fillRect(0, 0, 1024, 576); //not drawing anything
   background.update();
-  shop.update();
+  // shop.update();
   // contrast background
   // ctx.fillStyle = 'rgba(255, 255, 255, 0.15)';
   // ctx.fillRect(0, 0, canvasElement.width, canvasElement.height);

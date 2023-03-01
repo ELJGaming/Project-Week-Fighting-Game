@@ -1,5 +1,5 @@
 const fighters = {
-    huntress: new Fighter({
+    huntress: {
         position: {
             x: canvasElement.width * 0.4,
             y: 15,
@@ -53,8 +53,8 @@ const fighters = {
             width: 160,
             height: 50
         }
-    }),
-    samuariMack: new Fighter({
+    },
+    samuariMack: {
         position: {
             x: canvasElement.width * 0.4,
             y: 15,
@@ -108,8 +108,8 @@ const fighters = {
             width: 160,
             height: 50
         }
-    }),
-    kenji: new Fighter({
+    },
+    kenji: {
         position: {
             x: canvasElement.width * 0.8,
             y: 15,
@@ -163,8 +163,8 @@ const fighters = {
             width: 160,
             height: 50
         }
-    }),
-    fantasyWarrior: new Fighter({
+    },
+    fantasyWarrior: {
         position: {
             x: canvasElement.width * 0.4,
             y: 15,
@@ -218,8 +218,8 @@ const fighters = {
             width: 160,
             height: 50
         }
-    }),
-    evilWarrior: new Fighter({
+    },
+    evilWarrior: {
         position: {
             x: canvasElement.width * 0.4,
             y: 15,
@@ -273,8 +273,8 @@ const fighters = {
             width: 160,
             height: 50
         }
-    }),
-    martialHero: new Fighter({
+    },
+    martialHero: {
         position: {
             x: canvasElement.width * 0.4,
             y: 15,
@@ -328,60 +328,29 @@ const fighters = {
             width: 130,
             height: 50
         }
-    }),
-    // fantasyWarrior: new Fighter({
-    //     position: {
-    //         x: canvasElement.width * 0.8,
-    //         y: 15,
-    //     },
-    //     velocity: {
-    //         x: 0,
-    //         y: 0,
-    //     },
-    //     offset: {
-    //         x: 215,
-    //         y: 105,
-    //     },
-    //     imageSrc: '../img/Fantasy Warrior/Idle.png',
-    //     framesMax: 10,
-    //     scale: 2.5,
-    //     sprites: {
-    //         idle: {
-    //             imageSrc: '../img/Fantasy Warrior/Idle.png',
-    //             framesMax: 10
-    //         },
-    //         run: {
-    //             imageSrc: '../img/Fantasy Warrior/Run.png',
-    //             framesMax: 8
-    //         },
-    //         jump: {
-    //             imageSrc: '../img/Fantasy Warrior/Jump.png',
-    //             framesMax: 3
-    //         },
-    //         fall: {
-    //             imageSrc: '../img/Fantasy Warrior/Fall.png',
-    //             framesMax: 3
-    //         },
-    //         attack1: {
-    //             imageSrc: '../img/Fantasy Warrior/Attack1.png',
-    //             framesMax: 7
-    //         },
-    //         takeHit: {
-    //             imageSrc: '../img/Fantasy Warrior/Take hit.png',
-    //             framesMax: 3
-    //         },
-    //         death: {
-    //             imageSrc: '../img/Fantasy Warrior/Death.png',
-    //             framesMax: 7
-    //         }
-    //     },
-    //     attackBox: {
-    //         offset: {
-    //             x: 100,
-    //             y: 50
-    //         },
-    //         width: 160,
-    //         height: 50
-    //     }
-    // }),
+    }
+};
+
+const maps = {
+    map1: {
+        position: {
+            x: 0,
+            y: 0
+        },
+        imageSrc: '../img/backgrounds/fighting-background-1.gif'
+    },
+    map2: {
+        position: {
+            x: 0,
+            y: 0
+        },
+        imageSrc: '../gif/2map.gif'
+    },
+    map3: {
+        position: {
+            x: 0,
+            y: 0
+        },
+        imageSrc: '../gif/map1.gif'
+    }
 }

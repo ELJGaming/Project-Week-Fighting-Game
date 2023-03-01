@@ -2,28 +2,22 @@
 // const ctx = canvas.getContext('2d');
 const characterMusic = document.getElementById('selectcharacterMusic').play()
 const characters = document.querySelectorAll('.character');
-let selectedCharacter = null;
-// debugger
+let count = 1;
 const obj = {
-  character1 : fighters.fantasyWarrior,
-  character2 : fighters.martialHero,
-  character3 : fighters.kenji,
-  character4 : fighters.samauriMack,
-  character5 : fighters.evilWarrior,
-  character6 : fighters.huntress,
+  character1: fighters.fantasyWarrior,
+  character2: fighters.martialHero,
+  character3: fighters.kenji,
+  character4: fighters.samauriMack,
+  character5: fighters.evilWarrior,
+  character6: fighters.huntress,
 }
 
 characters.forEach((character) => {
   character.addEventListener('click', () => {
-    const fighter = character.id
-    console.log(fighter)
-    localStorage.setItem('player1',JSON.stringify(obj[fighter]));
-    console.log(localStorage)
-    if (selectedCharacter) {
-      selectedCharacter.classList.remove('selected');
-    }
-    selectedCharacter = character;
-    selectedCharacter.classList.add('selected');
+    const fighter = character.id;
+    localStorage.setItem(`player${count}`, JSON.stringify(obj[fighter]));
+    count++;
+    if (count === 3) window.location.href = "../html/selectmap.html";
   });
 });
 
