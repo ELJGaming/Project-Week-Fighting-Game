@@ -470,7 +470,7 @@ animatieSprites();
 //Move Sprite usimg event listeners
 /////////////////
 
-let jah = window.addEventListener("keydown", (event) => {
+window.addEventListener("keydown", (event) => {
   // debugger
   ////player
   if (!player.dead) {

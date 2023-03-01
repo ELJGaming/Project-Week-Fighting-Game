@@ -135,13 +135,13 @@ class Fighter extends Sprite {
         if (this.image === this.sprites.death.image) {
             if (this.framesCurrent === this.sprites.death.framesMax - 1) this.dead = true;
             return;
-        } 
-        
+        }
+
         if (this.image === this.sprites.attack2.image && this.framesCurrent < this.sprites.attack2.framesMax - 1) return;
         // override all other animations with the attacking animation
         else if (this.image === this.sprites.attack1.image && this.framesCurrent < this.sprites.attack1.framesMax - 1) return;
         // override all other animations with the take hit animation
-        else if (this.image === this.sprites.takeHit.image && this.framesCurrent < this.sprites.takeHit.framesMax - 1) return; 
+        else if (this.image === this.sprites.takeHit.image && this.framesCurrent < this.sprites.takeHit.framesMax - 1) return;
         switch (sprite) {
             case 'idle':
                 if (this.image !== this.sprites.idle.image) {
@@ -183,14 +183,14 @@ class Fighter extends Sprite {
                     this.image = this.sprites.attack2.image;
                     this.framesMax = this.sprites.attack2.framesMax;
                     this.framesCurrent = 0;
-                }  
+                }
                 break;
-                case 'attack3':
+            case 'attack3':
                 if (this.image !== this.sprites.attack3.image) {
                     this.image = this.sprites.attack3.image;
                     this.framesMax = this.sprites.attack2.framesMax;
                     this.framesCurrent = 0;
-                }  
+                }
                 break;
             case 'takeHit':
                 if (this.image !== this.sprites.takeHit.image) {

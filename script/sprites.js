@@ -36,6 +36,10 @@ const fighters = {
                 imageSrc: '../img/Huntress/Attack1.png',
                 framesMax: 5
             },
+            attack2: {
+                imageSrc: '../img/Huntress/Attack2.png',
+                framesMax: 5
+            },
             takeHit: {
                 imageSrc: '../img/Huntress/Take hit.png',
                 framesMax: 3
@@ -89,6 +93,10 @@ const fighters = {
             },
             attack1: {
                 imageSrc: '../img/samauriMack/Attack1.png',
+                framesMax: 6
+            },
+            attack2: {
+                imageSrc: '../img/samauriMack/Attack2.png',
                 framesMax: 6
             },
             takeHit: {
@@ -146,6 +154,10 @@ const fighters = {
                 imageSrc: '../img/kenji/Attack1.png',
                 framesMax: 4
             },
+            attack2: {
+                imageSrc: '../img/kenji/Attack2.png',
+                framesMax: 4
+            },
             takeHit: {
                 imageSrc: '../img/kenji/Take hit.png',
                 framesMax: 3
@@ -199,6 +211,10 @@ const fighters = {
             },
             attack1: {
                 imageSrc: '../img/Fantasy Warrior/Attack1.png',
+                framesMax: 7
+            },
+            attack2: {
+                imageSrc: '../img/Fantasy Warrior/Attack2.png',
                 framesMax: 7
             },
             takeHit: {
@@ -256,6 +272,10 @@ const fighters = {
                 imageSrc: '../img/EVil Wizard 2/Attack1.png',
                 framesMax: 8
             },
+            attack2: {
+                imageSrc: '../img/EVil Wizard 2/Attack2.png',
+                framesMax: 8
+            },
             takeHit: {
                 imageSrc: '../img/EVil Wizard 2/Take hit.png',
                 framesMax: 3
@@ -309,6 +329,10 @@ const fighters = {
             },
             attack1: {
                 imageSrc: '../img/Martial Hero 3/Attack1.png',
+                framesMax: 7
+            },
+            attack2: {
+                imageSrc: '../img/Martial Hero 3/Attack2.png',
                 framesMax: 7
             },
             takeHit: {
