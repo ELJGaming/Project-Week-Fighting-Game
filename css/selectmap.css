@@ -11,7 +11,20 @@ body {
     background-repeat: no-repeat;
   }
   
-
+  #displayMapSelection{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    top:10%;
+    right: 47%;
+    color:white;
+    font-family: 'Press Start 2P', cursive;
+    font-weight: bold;
+    color:white;
+    font-size: 25px;
+  }
   #maps {
     display: flex;
     justify-content: center;

@@ -410,10 +410,10 @@ function animatieSprites() {
   else if (player.velocity.y > 0) player.switchSprite('fall');
 
   //Enemy Movement
-  if (keys.ArrowLeft.pressed && enemy.lastKey === "ArrowLeft" && enemy.position.x > 0) {
+  if (keys.ArrowLeft.pressed && enemy.lastKey === "ArrowLeft" && enemy.position.x - enemy.width > 0) {
     enemy.velocity.x = -5;
     enemy.switchSprite('run');
-  } else if (keys.ArrowRight.pressed && enemy.lastKey === "ArrowRight" && enemy.position.x + enemy.width + enemy.offset.x < canvasElement.width) {
+  } else if (keys.ArrowRight.pressed && enemy.lastKey === "ArrowRight" && enemy.position.x + enemy.width < canvasElement.width) {
     enemy.velocity.x = 5;
     // console.log(enemy.position.x);
     enemy.switchSprite('run');
