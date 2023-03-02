@@ -10,6 +10,20 @@ body {
     background-image: url('../img/backgrounds/selectcharacter.jpg');
     background-repeat: no-repeat;
   }
+  #displaySelection{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    text-align: center;
+    align-items: center;
+    top:10%;
+    right: 35%;
+    color:white;
+    font-family: 'Press Start 2P', cursive;
+    font-weight: bold;
+    color:white;
+    font-size: 18px;
+  }
   
   #button1{
     position: absolute;
