@@ -393,10 +393,11 @@ function animatieSprites() {
   if (!borderCollision(player)) { }
 
   //Player Movement
-  if (keys.a.pressed && player.lastKey === "a") {
+  if (keys.a.pressed && player.lastKey === "a" && player.position.x - player.width > 0) {
     player.velocity.x = -5;
     player.switchSprite('run');
-  } else if (keys.d.pressed && player.lastKey === "d") {
+    // console.log(player.position.x);
+  } else if (keys.d.pressed && player.lastKey === "d" && player.position.x + player.width < canvasElement.width) {
     player.velocity.x = 5;
     player.switchSprite('run');
   } else {
@@ -407,11 +408,12 @@ function animatieSprites() {
   else if (player.velocity.y > 0) player.switchSprite('fall');
 
   //Enemy Movement
-  if (keys.ArrowLeft.pressed && enemy.lastKey === "ArrowLeft") {
+  if (keys.ArrowLeft.pressed && enemy.lastKey === "ArrowLeft" && enemy.position.x > 0) {
     enemy.velocity.x = -5;
     enemy.switchSprite('run');
-  } else if (keys.ArrowRight.pressed && enemy.lastKey === "ArrowRight") {
+  } else if (keys.ArrowRight.pressed && enemy.lastKey === "ArrowRight" && enemy.position.x + enemy.width + enemy.offset.x < canvasElement.width) {
     enemy.velocity.x = 5;
+    // console.log(enemy.position.x);
     enemy.switchSprite('run');
   } else {
     enemy.switchSprite('idle');
