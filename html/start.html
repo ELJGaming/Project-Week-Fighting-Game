@@ -4,6 +4,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <link rel='stylesheet' href="../css/style.css">
+    <script src="../script/canvas.js" defer></script>
+    <script src="../script/sprites.js" defer></script>
     <script src="../script/classes.js" defer></script>
     <script src="../script/start.js" defer></script>
 </head>
@@ -51,7 +53,7 @@
             <div id='container' style="animation-delay: 0s;">
                 <p id='result'></p>
                 <button id='restartBtn' onclick="window.location.reload();">Restart</button>
-                <button id='menuBtn' onclick=" window.location.href= 'index.html';">Menu</button>
+                <button id='menuBtn' onclick=" window.location.href= '../index.html';">Menu</button>
             </div>
             <audio id="player1-audio" src="../mp3/player1wins.mp3"></audio>
             <audio id="player2-audio" src="../mp3/player2wins.mp3"></audio>
@@ -61,7 +63,7 @@
                 <p>PAUSE</p>
                 <button id='controlBtns' onclick="howToPlayFunction()">Controls</button>
                 <button id='restartBtn' onclick="window.location.reload();">Restart</button>
-                <button id='menuBtn' onclick=" window.location.href= './index.html';">Menu</button>
+                <button id='menuBtn' onclick=" window.location.href= '../index.html';">Menu</button>
             </div>
             <button onclick='pressedResume()' id='resumeBtn'><i class="fa-solid fa-play"></i></button>
         </div>

@@ -12,9 +12,11 @@ const obj = {
   character5: fighters.evilWarrior,
   character6: fighters.huntress,
 }
+if (count === 1) playAudio('../mp3/player1selection.mp3')
 
 characters.forEach((character) => {
   character.addEventListener('click', () => {
+    if (count === 1) playAudio('../mp3/player2selection.mp3')
     const fighter = character.id;
     localStorage.setItem(`player${count}`, JSON.stringify(obj[fighter]));
     count++;
@@ -22,8 +24,10 @@ characters.forEach((character) => {
   });
 });
 
-function turnOnSelection(){
-  displayTitle.innerText = "PLAYER 2 PICK YOUR CHARACTER";
+function playAudio(file){
+  // displayTitle.innerText = "PLAYER 2 PICK YOUR CHARACTER";
+  const audio = new Audio(file);
+  audio.play();
 }
 //If there is already a selected character remove the 'selected' class from that character element.
 //Assign the clicked character element to the selectedCharacter variable.

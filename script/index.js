@@ -10,4 +10,4 @@ toggleMusicButton.addEventListener("click", () => {
 canvas.width = 1024;
 canvas.height = 576;
 
-// localStorage.clear()
+localStorage.clear()

@@ -18,18 +18,18 @@
 ///Screen
 ///////////////
 
-//select the canvas
-const canvasElement = document.querySelector("canvas");
-//context responsible for shapes and sprites
-const ctx = canvasElement.getContext("2d"); //2d game
-// canvasElement.save();
-// canvasElement.scale(-1,1);
-// canvasElement.restore();
+// //select the canvas
+// const canvasElement = document.querySelector("canvas");
+// //context responsible for shapes and sprites
+// const ctx = canvasElement.getContext("2d"); //2d game
+// // canvasElement.save();
+// // canvasElement.scale(-1,1);
+// // canvasElement.restore();
 
 
-// size of screen
-canvasElement.width = 1024;
-canvasElement.height = 576; //dont use . style
+// // size of screen
+// canvasElement.width = 1024;
+// canvasElement.height = 576; //dont use . style
 
 ctx.fillRect(0, 0, 1024, 576); //4arguments x, y, width, height fills a rectangle
 
@@ -96,15 +96,16 @@ let hitSounds = ['../']
 //   framesMax: 6
 // });
 
-
-const background = new Sprite(JSON.parse(localStorage.getItem('map')));
-console.log(background)
+const map = JSON.parse(localStorage.getItem('map'));
+const background = map ? new Sprite(map) : new Sprite(maps.map2);
 
 /////////////
 //Player
 ////////////
-const player  = new Fighter(JSON.parse(localStorage.getItem('player1')));
-const enemy  = new Fighter(JSON.parse(localStorage.getItem('player2')));
+const player1 = JSON.parse(localStorage.getItem('player1'));
+const player2 = JSON.parse(localStorage.getItem('player2'));
+const player = player1 ? new Fighter(player1) : new Fighter(fighters.fantasyWarrior);
+const enemy = player2 ? new Fighter(player2) : new Fighter(fighters.kenji);
 // const player = new Fighter({
 //   position: {
 //     x: canvasElement.width * 0.4,

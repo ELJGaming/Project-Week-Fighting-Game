@@ -1,11 +1,13 @@
 class Sprite {
-  constructor({
-    position,
-    imageSrc,
-    scale = 1,
-    framesMax = 1,
-    offset = { x: 0, y: 0 },
-  }) {
+  constructor(obj) {
+    console.log(obj)
+    let {
+      position,
+      imageSrc,
+      scale = 1,
+      framesMax = 1,
+      offset = { x: 0, y: 0 },
+    } = obj
     /*position independent of one another. wrapping in an object makes u pass through one argument instead of two cat pass through velocity first*/
     //define the properties associated with the sprite
     this.position = position;
