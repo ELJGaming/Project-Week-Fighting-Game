@@ -18,12 +18,12 @@ body {
     text-align: center;
     align-items: center;
     top:10%;
-    right: 52%;
+    right: 47%;
     color:white;
     font-family: 'Press Start 2P', cursive;
     font-weight: bold;
     color:white;
-    font-size: 18px;
+    font-size: 25px;
   }
   #maps {
     display: flex;
