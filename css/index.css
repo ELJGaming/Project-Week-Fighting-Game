@@ -15,7 +15,7 @@ canvas {
   right: 5%;
   padding: 5px;
   background-color: transparent;
-      color: #ffffff;
+      color: beige;
       border: none;
       padding: 15px 32px;
       text-align: center;
@@ -44,7 +44,7 @@ canvas {
   font-size: 50px;
   font-family: 'Press Start 2P', cursive;
   text-transform: uppercase;
-  color: white;
+  color: beige;
   text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
   opacity: 0;
   animation-name: bounceIn;
@@ -109,12 +109,12 @@ canvas {
   
     /* Darker background on mouse-over */
     #start-button:hover {
-  background-color: RoyalBlue;
+  background-color: maroon;
 }
 
  /* Darker background on mouse-over */
  #play-now-button:hover {
-  background-color: maroon;
+  background-color:rgb(159, 56, 19); 
 }
 
 #how-to-play-button:hover {

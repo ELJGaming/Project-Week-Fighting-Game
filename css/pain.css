@@ -12,6 +12,12 @@
     font-size: 28px;
     text-align: center;
 }
+#imgswitch {
+  animation: fadeIn;
+  animation-duration: 4s;
+  animation-delay: 3s;
+  animation-fill-mode: forwards;
+}
 
 #gameName {
     position: absolute;
@@ -44,3 +50,4 @@ img {
 img.fade-in {
 	opacity: 1;
 }
+
