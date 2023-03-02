@@ -329,12 +329,14 @@ window.addEventListener("load", startCountdown);
 function pressedPause() {
   screenPause.style.display = 'flex';
   clearTimeout(timerId);
+  document.querySelector('#song-audio').pause();
 }
 //Resume
 function pressedResume() {
   decrementTimer();
   screenPause.style.display = 'none';
   controlScreen.style.display = 'none';
+  document.querySelector('#song-audio').play();
 }
 function howToPlayFunction() {
   screenPause.style.display = 'none';
@@ -396,6 +398,7 @@ function animatieSprites() {
   if (keys.a.pressed && player.lastKey === "a" && player.position.x - player.width > 0) {
     player.velocity.x = -5;
     player.switchSprite('run');
+    // console.log(player.position.x);
   } else if (keys.d.pressed && player.lastKey === "d" && player.position.x + player.width < canvasElement.width) {
     player.velocity.x = 5;
     player.switchSprite('run');
@@ -412,6 +415,7 @@ function animatieSprites() {
     enemy.switchSprite('run');
   } else if (keys.ArrowRight.pressed && enemy.lastKey === "ArrowRight" && enemy.position.x + enemy.width < canvasElement.width) {
     enemy.velocity.x = 5;
+    // console.log(enemy.position.x);
     enemy.switchSprite('run');
   } else {
     enemy.switchSprite('idle');
@@ -468,7 +472,6 @@ animatieSprites();
 /////////////////
 
 window.addEventListener("keydown", (event) => {
-  // debugger
   ////player
   if (!player.dead) {
     switch (event.key) {
