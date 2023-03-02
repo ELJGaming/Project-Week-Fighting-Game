@@ -329,12 +329,14 @@ window.addEventListener("load", startCountdown);
 function pressedPause() {
   screenPause.style.display = 'flex';
   clearTimeout(timerId);
+  document.querySelector('#song-audio').pause();
 }
 //Resume
 function pressedResume() {
   decrementTimer();
   screenPause.style.display = 'none';
   controlScreen.style.display = 'none';
+  document.querySelector('#song-audio').play();
 }
 function howToPlayFunction() {
   screenPause.style.display = 'none';
@@ -473,7 +475,6 @@ animatieSprites();
 /////////////////
 
 window.addEventListener("keydown", (event) => {
-  // debugger
   ////player
   if (!player.dead) {
     switch (event.key) {

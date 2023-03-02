@@ -89,7 +89,8 @@ class Fighter extends Sprite {
         this.attackBox.position.x = this.position.x + this.attackBox.offset.x;
         this.attackBox.position.y = this.position.y + this.attackBox.offset.y;
         // draw attack box
-        // ctx.fillRect(this.attackBox.position.x, this.attackBox.position.y, this.attackBox.width, this.attackBox.height);
+        // ctx.fillRect(this.attackBox.position.x, this.attackBox.position.y, this.attackBox.width, this.attackBox.height);    console.log(enemy.position.x);
+
 
         this.position.x += this.velocity.x;
         this.position.y += this.velocity.y; //over time our position has velocity is added to it but dont forget to call this function in the animation function
@@ -101,27 +102,16 @@ class Fighter extends Sprite {
     }
 
     attack() {
-        console.log(1)
         this.switchSprite('attack1');
         this.isAttacking = true;
-        // setTimeout(() => {
-        //     this.isAttacking = false;
-        // }, 100);
     }
     attack2() {
-        console.log(2)
         this.switchSprite('attack2');
         this.isAttacking = true;
-        // setTimeout(() => {
-        //     this.isAttacking = false;
-        // }, 100);
     }
     // attack3() {
     //     this.switchSprite('attack3');
     //     this.isAttacking = true;
-    //     // setTimeout(() => {
-    //     //     this.isAttacking = false;
-    //     // }, 100);
     // }
 
     takeHit() {
