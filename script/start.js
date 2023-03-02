@@ -377,13 +377,13 @@ decrementTimer();
 //moving objects velocity determines direction inside an animation loopand gravity
 function animatieSprites() {
   window.requestAnimationFrame(animatieSprites); //creating an infinite loop
-  ctx.fillStyle = "black"; // black canvas
-  ctx.fillRect(0, 0, 1024, 576); //not drawing anything
+  // ctx.fillStyle = "black"; // black canvas
+  // ctx.fillRect(0, 0, 1024, 576); //not drawing anything
   background.update();
   // shop.update();
   // contrast background
-  // ctx.fillStyle = 'rgba(255, 255, 255, 0.15)';
-  // ctx.fillRect(0, 0, canvasElement.width, canvasElement.height);
+  ctx.fillStyle = 'rgba(255, 255, 255, 0)';
+  ctx.fillRect(0, 0, canvasElement.width, canvasElement.height);
   player.moveSprite();
   enemy.moveSprite();
 
@@ -430,7 +430,7 @@ function animatieSprites() {
     player.framesCurrent === 4
   ) {
     enemy.takeHit();
-    document.querySelector('#Ooof').play();
+    // document.querySelector('#Ooof').play();
     player.isAttacking = false;
     gsap.to("#enemyHealth", {
       width: enemy.health + "%"
