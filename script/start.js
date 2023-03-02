@@ -448,8 +448,6 @@ function animatieSprites() {
     enemy.framesCurrent === 2
   ) {
     player.takeHit();
-    //leave this when merging
-    document.querySelector('#Ooof').play();
     enemy.isAttacking = false;
     gsap.to("#playerHealth", {
       width: player.health + "%"
@@ -460,7 +458,6 @@ function animatieSprites() {
 
   //end game based on health
   if (player.health <= 0 || enemy.health <= 0) {
-    // document.querySelector('#deathAudio').play();
     determineWinner({ player, enemy, timerId });
   }
 }
@@ -492,9 +489,9 @@ window.addEventListener("keydown", (event) => {
       case "c":
         player.attack2();
         break; // if key is equal to a player attack
-      case "v":
-        player.attack3();
-        break; // if key is equal to a player attack
+      // case "v":
+      //   player.attack3();
+      //   break; // if key is equal to a player attack
     }
   }
   ////enemy
