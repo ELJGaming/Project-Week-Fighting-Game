@@ -10,6 +10,9 @@ const obj = {
       map3: maps.map3
 };
 
+const audio = new Audio('../img/mapselection.mp3');
+audio.play();
+
 mapsElements.forEach((mapElement) => {
       mapElement.addEventListener('click', () => {
             const map = mapElement.id;
